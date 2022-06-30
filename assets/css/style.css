@@ -42,7 +42,6 @@ p{
 }
 .hide{
     width: 0 !important;
-    overflow: hidden !important;
 }
 body{
     margin: 0;
@@ -98,6 +97,7 @@ header > div {
     border-right: solid 2px #939A99;
     transition: all 0.5s ease-in-out;
     justify-content: center;
+    overflow: hidden;
 }
 .sideMenuHome > ul{
     list-style: none;
