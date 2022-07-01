@@ -2,6 +2,8 @@ var sideMenuFolder = document.querySelector('.sideMenuFolder');
 var sideMenuHome = document.querySelector('.sideMenuHome');
 var crossHome = document.querySelector('#crossHome');
 var crossFolder = document.querySelector('#crossFolder');
+var allSection = document.querySelectorAll('#content > section');
+var sectionCheckNow = '';
 var borderChecking = 0;
 var openChecking = 0;
 
@@ -27,7 +29,6 @@ function checkOtherOpen(firstTarget, crossTarget ){
             openChecking = 1;
         }
     }
-    console.log(openChecking);
     if (openChecking === 1) {
         firstTarget.classList.toggle('open');
         firstTarget.classList.toggle('hide');
@@ -36,6 +37,29 @@ function checkOtherOpen(firstTarget, crossTarget ){
         checkBorder(firstTarget);
     }
 }
+
+
+function checkOpenSectionSecondary(target){
+    for (let i = 0; i < target.classList.length; i++) {
+        if(target.classList[i] === 'active'){
+            openChecking = 1;
+        }
+    }
+    if (openChecking === 1) {
+        target.classList.toggle('active');
+        target.classList.toggle('none');
+        openChecking = 0;
+    }
+}
+function checkOpenSectionPrimary(){
+    for (let i = 0; i < allSection.length; i++){
+        sectionCheckNow = allSection[i];
+        checkOpenSectionSecondary(sectionCheckNow);
+    };
+}
+
+
+
 document.querySelector('#homeSvg').addEventListener('click', function() {
     crossHome.classList.toggle('crossRotate');
     sideMenuHome.classList.toggle('hide');
@@ -50,3 +74,13 @@ document.querySelector('#folderSvg').addEventListener('click', function() {
     checkOtherOpen(sideMenuHome, crossHome);
     checkBorder(sideMenuFolder);
 });
+document.querySelector('#aboutMenuButton').addEventListener('click', function() {
+    checkOpenSectionPrimary();
+    document.querySelector('.about').classList.toggle('none');
+    document.querySelector('.about').classList.toggle('active');
+})
+document.querySelector('#formationsMenuButton').addEventListener('click', function() {
+    checkOpenSectionPrimary();
+    document.querySelector('.formations').classList.toggle('none');
+    document.querySelector('.formations').classList.toggle('active');
+})
