@@ -6,7 +6,6 @@ var allSection = document.querySelectorAll('#content > section');
 var sectionCheckNow = '';
 var borderChecking = 0;
 var openChecking = 0;
-
 function checkBorder(target){
     for (let i = 0; i < target.classList.length; i++) {
         if(target.classList[i] === 'borderNone'){
@@ -66,6 +65,7 @@ document.querySelector('#homeSvg').addEventListener('click', function() {
     sideMenuHome.classList.toggle('open');
     checkOtherOpen(sideMenuFolder, crossFolder);
     checkBorder(sideMenuHome);
+    console.log(document.querySelector('.sideMenuHome').classList.contains('open'));
 });
 document.querySelector('#folderSvg').addEventListener('click', function() {
     crossFolder.classList.toggle('crossRotate');

@@ -165,17 +165,48 @@ header > div {
     gap: 20px;
 }
 .techAndComp{
-    width: 75vw;
+    width: 70vw;
     min-height: 100vh;
     flex-wrap: wrap;
     overflow-y: auto;
+    gap: 20px;
 }
-.known{
-    padding: 20px 0;
+.technologiesBlock{
+    width: 100%;
+    gap: 50px;
 }
-.known:first-child{
-    padding: 20px;
+.techno{
+    width: 100%;
+    flex-wrap: wrap;
 }
+.techno > div{
+    width: 45%;
+    padding: 10px;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.techno > div > div{
+    width: 70%;
+    height: 10px;
+    background-color: #939A99;
+}
+.barHTML > .fill{
+    height: 100%;
+    background-color: #fff;
+    width: 60%;
+}
+.barJS > .fill{
+    height: 100%;
+    background-color: #fff;
+    width: 60%;
+}
+.barCSS > .fill{
+    height: 100%;
+    background-color: #fff;
+    width: 40%;
+}
+
 
 
 
