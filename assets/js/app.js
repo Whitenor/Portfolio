@@ -84,3 +84,8 @@ document.querySelector('#formationsMenuButton').addEventListener('click', functi
     document.querySelector('.formations').classList.toggle('none');
     document.querySelector('.formations').classList.toggle('active');
 })
+document.querySelector('#techAndComp').addEventListener('click', function() {
+    checkOpenSectionPrimary();
+    document.querySelector('.techAndComp').classList.toggle('none');
+    document.querySelector('.techAndComp').classList.toggle('active');
+})

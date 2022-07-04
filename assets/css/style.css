@@ -164,6 +164,18 @@ header > div {
     padding: 20px 0;
     gap: 20px;
 }
+.techAndComp{
+    width: 75vw;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+.known{
+    padding: 20px 0;
+}
+.known:first-child{
+    padding: 20px;
+}
 
 
 
