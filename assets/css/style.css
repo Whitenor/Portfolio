@@ -222,8 +222,17 @@ header > div {
     flex-direction: column;
     align-items: flex-start;
 }
-.project > .card{
-    
+.project{
+    width: 75vh;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.project > .card > img{
+    width: 320px;
+    height: 180px;
+}
+.project > .card > p{
+    text-align: center;
 }
 
 
