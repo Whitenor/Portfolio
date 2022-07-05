@@ -3,6 +3,7 @@ var sideMenuHome = document.querySelector('.sideMenuHome');
 var crossHome = document.querySelector('#crossHome');
 var crossFolder = document.querySelector('#crossFolder');
 var allSection = document.querySelectorAll('#content > section');
+var pageAbout = document.querySelector('.about');
 var sectionCheckNow = '';
 var borderChecking = 0;
 var openChecking = 0;
@@ -55,6 +56,17 @@ function checkOpenSectionPrimary(){
         sectionCheckNow = allSection[i];
         checkOpenSectionSecondary(sectionCheckNow);
     };
+}
+
+function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck, pageTarget){
+    crossToRotate.classList.toggle('crossRotate');
+    menuFocus.classList.toggle('hide');
+    menuFocus.classList.toggle('open');
+    checkOtherOpen(menuToCheck, crossToCheck);
+    checkBorder(menuFocus);
+    checkOpenSectionPrimary();
+    pageTarget.classList.toggle('none');
+    pageTarget.classList.toggle('active');
 }
 
 
