@@ -65,7 +65,9 @@ document.querySelector('#homeSvg').addEventListener('click', function() {
     sideMenuHome.classList.toggle('open');
     checkOtherOpen(sideMenuFolder, crossFolder);
     checkBorder(sideMenuHome);
-    console.log(document.querySelector('.sideMenuHome').classList.contains('open'));
+    checkOpenSectionPrimary();
+    document.querySelector('.about').classList.toggle('none');
+    document.querySelector('.about').classList.toggle('active');
 });
 document.querySelector('#folderSvg').addEventListener('click', function() {
     crossFolder.classList.toggle('crossRotate');
@@ -73,6 +75,9 @@ document.querySelector('#folderSvg').addEventListener('click', function() {
     sideMenuFolder.classList.toggle('open');
     checkOtherOpen(sideMenuHome, crossHome);
     checkBorder(sideMenuFolder);
+    checkOpenSectionPrimary();
+    document.querySelector('.project').classList.toggle('none');
+    document.querySelector('.project').classList.toggle('active');
 });
 document.querySelector('#aboutMenuButton').addEventListener('click', function() {
     checkOpenSectionPrimary();

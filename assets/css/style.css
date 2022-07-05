@@ -23,6 +23,11 @@ p{
 }
 li{
     cursor: pointer;
+    font-family: 'Biryani', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    list-style: none;
 }
 .flexColumn {
     display: flex;
@@ -205,6 +210,20 @@ header > div {
     height: 100%;
     background-color: #fff;
     width: 40%;
+}
+.otherComp{
+    gap: 50px;
+}
+.language > p, .compDivers > p{
+    text-align: start;
+}
+.language > ul, .compDivers > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.project > .card{
+    
 }
 
 
