@@ -6,7 +6,7 @@ var allSection = document.querySelectorAll('#content > section');
 var pageAbout = document.querySelector('.about');
 var pageFormation = document.querySelector('.formations');
 var pageTechAndComp = document.querySelector('.techAndComp');
-var cardProject = document.querySelectorAll('.project > .card');
+var pageProject = document.querySelector('.project');
 var sectionCheckNow = '';
 var borderChecking = 0;
 var openChecking = 0;
@@ -80,16 +80,12 @@ function subMenu(target) {
     target.classList.toggle('none');
     target.classList.toggle('active');
 }
-function modalGenerate(){
-    if (e.target.id = 'popCode'){
-        alert('test')
-    }
-}
+
 document.querySelector('#homeSvg').addEventListener('click', function() {
     mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder, pageAbout);
 });
 document.querySelector('#folderSvg').addEventListener('click', function() {
-    mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome, pageAbout);
+    mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome, pageProject);
 });
 
 
@@ -102,8 +98,3 @@ document.querySelector('#formationsMenuButton').addEventListener('click', functi
 document.querySelector('#techAndComp').addEventListener('click', function() {
     subMenu(pageTechAndComp);
 });
-for (let i = 0; i < cardProject.length; i++) {
-    cardProject[i].addEventListener('click', function() {
-        modalGenerate();
-    })
-}
