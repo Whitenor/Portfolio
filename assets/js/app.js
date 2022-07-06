@@ -4,6 +4,8 @@ var crossHome = document.querySelector('#crossHome');
 var crossFolder = document.querySelector('#crossFolder');
 var allSection = document.querySelectorAll('#content > section');
 var pageAbout = document.querySelector('.about');
+var pageFormation = document.querySelector('.formations');
+var pageTechAndComp = document.querySelector('.techAndComp');
 var sectionCheckNow = '';
 var borderChecking = 0;
 var openChecking = 0;
@@ -37,8 +39,6 @@ function checkOtherOpen(firstTarget, crossTarget ){
         checkBorder(firstTarget);
     }
 }
-
-
 function checkOpenSectionSecondary(target){
     for (let i = 0; i < target.classList.length; i++) {
         if(target.classList[i] === 'active'){
@@ -57,7 +57,6 @@ function checkOpenSectionPrimary(){
         checkOpenSectionSecondary(sectionCheckNow);
     };
 }
-
 function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck, pageTarget){
     crossToRotate.classList.toggle('crossRotate');
     menuFocus.classList.toggle('hide');
@@ -68,41 +67,26 @@ function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck, pageTar
     pageTarget.classList.toggle('none');
     pageTarget.classList.toggle('active');
 }
-
-
+function subMenu(target) {
+    checkOpenSectionPrimary();
+    target.classList.toggle('none');
+    target.classList.toggle('active');
+}
 
 document.querySelector('#homeSvg').addEventListener('click', function() {
-    crossHome.classList.toggle('crossRotate');
-    sideMenuHome.classList.toggle('hide');
-    sideMenuHome.classList.toggle('open');
-    checkOtherOpen(sideMenuFolder, crossFolder);
-    checkBorder(sideMenuHome);
-    checkOpenSectionPrimary();
-    document.querySelector('.about').classList.toggle('none');
-    document.querySelector('.about').classList.toggle('active');
+    mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder, pageAbout);
 });
 document.querySelector('#folderSvg').addEventListener('click', function() {
-    crossFolder.classList.toggle('crossRotate');
-    sideMenuFolder.classList.toggle('hide');
-    sideMenuFolder.classList.toggle('open');
-    checkOtherOpen(sideMenuHome, crossHome);
-    checkBorder(sideMenuFolder);
-    checkOpenSectionPrimary();
-    document.querySelector('.project').classList.toggle('none');
-    document.querySelector('.project').classList.toggle('active');
+    mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome, pageAbout);
 });
+
+
 document.querySelector('#aboutMenuButton').addEventListener('click', function() {
-    checkOpenSectionPrimary();
-    document.querySelector('.about').classList.toggle('none');
-    document.querySelector('.about').classList.toggle('active');
+    subMenu(pageAbout);
 })
 document.querySelector('#formationsMenuButton').addEventListener('click', function() {
-    checkOpenSectionPrimary();
-    document.querySelector('.formations').classList.toggle('none');
-    document.querySelector('.formations').classList.toggle('active');
+    subMenu(pageFormation);
 })
 document.querySelector('#techAndComp').addEventListener('click', function() {
-    checkOpenSectionPrimary();
-    document.querySelector('.techAndComp').classList.toggle('none');
-    document.querySelector('.techAndComp').classList.toggle('active');
-})
+    subMenu(pageTechAndComp);
+});
