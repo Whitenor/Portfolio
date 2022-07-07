@@ -242,8 +242,111 @@ header > div {
 .project > .card > p{
     text-align: center;
 }
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 150px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.firstModalRow{
+    width: 100%;
+    height: 40vh;
+    background-color: #353839;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.leftBlock{
+    width: 80%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftBlock > .leftCol{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    background-color: #353839;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
 
-
+.leftBlock > .leftCol > h2{
+    width: 100%;
+    height: 30%;
+    background: white;
+}
+.leftBlock > .leftCol > img{
+    width: 100%;
+    height: auto;
+    max-width: 432px;
+    max-height: 243px;
+}
+.leftBlock > .rightCol{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.leftBlock > .rightCol > p{
+    width: 100%;
+    height: 30%;
+    background: #000;
+}
+.rightBlock{
+    width: 20%;
+    height: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.rightBlock>p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}
+.secondModalRow{
+    width: 100%;
+    height: 60vh;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.descriptionProject {
+    height: 60%;
+    width: 100%;
+    background-color: #353839;
+}
+.linkProject{
+    height: 30%;
+    width: 30%;
+    background-color: #353839;
+}
 
 
 @media screen and (max-width: 1024px) {
