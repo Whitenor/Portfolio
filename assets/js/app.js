@@ -17,6 +17,7 @@ var technoProject = document.querySelector('.technoProject');
 var descriptionProject = document.querySelector('.descriptionProject');
 var linkProject = document.querySelector('.linkProject');
 var closeModal = document.querySelector('.closeModal');
+var sideMenuProjectButton = document.querySelectorAll('.sideMenuFolder > ul > li >h2');
 var sectionCheckNow = '';
 var borderChecking = 0;
 var openChecking = 0;
@@ -92,7 +93,7 @@ function subMenu(target) {
 }
 function openModalCard(cibleClic){
     for (let i = 0; i < projectList.length; i++) {
-        if ('screen'+projectList[i].name === cibleClic || 'title'+projectList[i].name === cibleClic || cibleClic) {
+        if ('screen'+projectList[i].name === cibleClic || 'title'+projectList[i].name === cibleClic || projectList[i].name=== cibleClic) {
             titleProjectModal.textContent = projectList[i].name;
             imgModal.src = projectList[i].screenshot;
             imgModal.alt = 'screenshot de '+projectList[i].name;
@@ -113,8 +114,6 @@ document.querySelector('#homeSvg').addEventListener('click', function() {
 document.querySelector('#folderSvg').addEventListener('click', function() {
     mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome, pageProject);
 });
-
-
 document.querySelector('#aboutMenuButton').addEventListener('click', function() {
     subMenu(pageAbout);
 })
@@ -124,11 +123,26 @@ document.querySelector('#formationsMenuButton').addEventListener('click', functi
 document.querySelector('#techAndComp').addEventListener('click', function() {
     subMenu(pageTechAndComp);
 });
+document.querySelector('#technoButtonAbout').addEventListener('click', function() {
+    subMenu(pageTechAndComp);
+});
+document.querySelector('#projectButtonAbout').addEventListener('click', function() {
+    pageProject.classList.toggle('none');
+    pageProject.classList.toggle('active');
+    pageAbout.classList.toggle('none');
+    pageAbout.classList.toggle('active');
+});
 for (let i = 0; i < cardProject.length; i++) {
     cardProject[i].addEventListener('click', function(e) {
         openModalCard(e.target.id);
     });
     
+}
+for (let i = 0; i < sideMenuProjectButton.length; i++) {
+    sideMenuProjectButton[i].addEventListener('click', function(e) {
+        openModalCard(e.target.id);
+        mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome, pageProject);
+    });    
 }
 closeModal.addEventListener('click', function() {
     modal.classList.toggle('none');
