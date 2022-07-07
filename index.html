@@ -54,11 +54,11 @@
             </div>
             <div class="sideMenuFolder hide borderNone">
                 <ul>
-                    <li><h2>popCode</h2></li>
-                    <li><h2>Creative</h2></li>
-                    <li><h2>Capgemen</h2></li>
-                    <li><h2>Technews</h2></li>
-                    <li><h2>Allojyve</h2></li>
+                    <li><h2 id="popCode">popCode</h2></li>
+                    <li><h2 id="Creative">Creative</h2></li>
+                    <li><h2 id="Capgemen">Capgemen</h2></li>
+                    <li><h2 id="Technews">Technews</h2></li>
+                    <li><h2 id="Allojyve">Allojyve</h2></li>
                 </ul>
             </div>
         </section>
@@ -148,33 +148,33 @@
             </section>
             <section class="project none flexNormal">
                 <div class="card" id="popCode">
-                    <img src="assets/img/popcode.jpg" alt="Screenshot de popCode">
-                    <p>popCode</p>
+                    <img src="assets/img/popcode.jpg" alt="Screenshot de popCode" id="screenpopCode">
+                    <p id="titlepopCode">popCode</p>
                 </div>
-                <div class="card">
-                    <img src="assets/img/creative.jpg" alt="Screenshot de l'intégration Creative ACS">
-                    <p>Creative ACS</p>
+                <div class="card" id="Creative">
+                    <img src="assets/img/creative.jpg" alt="Screenshot de l'intégration Creative ACS" id="screenCreative">
+                    <p id="titleCreative">Creative ACS</p>
                 </div>
-                <div class="card">
-                    <img src="assets/img/capgemen.jpg" alt="Screenshot de l'intégration de Capgemen">
-                    <p>Capgemen</p>
+                <div class="card" id="Capgemen">
+                    <img src="assets/img/capgemen.jpg" alt="Screenshot de l'intégration de Capgemen" id="screenCapgemen">
+                    <p id="titleCapgemen">Capgemen</p>
                 </div>
-                <div class="card">
-                    <img src="assets/img/technews.jpg" alt="Screenshot de Technews, un blog conçu sous Wordpress">
-                    <p>Technews</p>
+                <div class="card" id="Technews">
+                    <img src="assets/img/technews.jpg" alt="Screenshot de Technews, un blog conçu sous Wordpress" id="screenTechnews">
+                    <p id="titleTechnews">Technews</p>
                 </div>
-                <div class="card">
-                    <img src="assets/img/allojyve.jpg" alt="Screenshot d'Allojyve, une intégration entièrement crée en javascript à partir d'une div unique et utilisant une API">
-                    <p>Allojyve</p>
+                <div class="card" id="Allojyve">
+                    <img src="assets/img/allojyve.jpg" alt="Screenshot d'Allojyve, une intégration entièrement crée en javascript à partir d'une div unique et utilisant une API" id="screenAllojyve">
+                    <p id="titleAllojyve">Allojyve</p>
                 </div>
             </section>
         </section>
-        <section class="modal">
+        <section class="modal none">
             <div class="firstModalRow">
                 <div class="leftBlock">
                     <div class="leftCol">
                         <h2 class="titleProjectModal"></h2>
-                        <img src="assets/img/allojyve.jpg" alt="">
+                        <img src="" alt="">
                     </div>
                     <div class="rightCol">
                         <p class="durationProject"></p>
@@ -188,7 +188,7 @@
             </div>
             <div class="secondModalRow">
                 <p class="descriptionProject"></p>
-                <a href="" class="linkProject"></a>
+                <a href="" class="linkProject" target="_blank"></a>
             </div>
         </section>
     </div>
