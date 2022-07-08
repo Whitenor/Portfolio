@@ -7,6 +7,7 @@ var pageAbout = document.querySelector('.about');
 var pageFormation = document.querySelector('.formations');
 var pageTechAndComp = document.querySelector('.techAndComp');
 var pageProject = document.querySelector('.project');
+var pageContact = document.querySelector('.contact');
 var cardProject = document.querySelectorAll('.project > .card');
 var modal = document.querySelector('.modal');
 var titleProjectModal = document.querySelector('.titleProjectModal');
@@ -18,6 +19,8 @@ var descriptionProject = document.querySelector('.descriptionProject');
 var linkProject = document.querySelector('.linkProject');
 var closeModal = document.querySelector('.closeModal');
 var sideMenuProjectButton = document.querySelectorAll('.sideMenuFolder > ul > li >h2');
+var listMenu = [sideMenuFolder, sideMenuHome];
+var listCross = [crossFolder, crossHome];
 var sectionCheckNow = '';
 var borderChecking = 0;
 var openChecking = 0;
@@ -82,9 +85,6 @@ function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck, pageTar
     menuFocus.classList.toggle('open');
     checkOtherOpen(menuToCheck, crossToCheck);
     checkBorder(menuFocus);
-    checkOpenSectionPrimary();
-    pageTarget.classList.toggle('none');
-    pageTarget.classList.toggle('active');
 }
 function subMenu(target) {
     checkOpenSectionPrimary();
@@ -109,10 +109,21 @@ function openModalCard(cibleClic){
     }
 }
 document.querySelector('#homeSvg').addEventListener('click', function() {
-    mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder, pageAbout);
+    mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder);
 });
 document.querySelector('#folderSvg').addEventListener('click', function() {
-    mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome, pageProject);
+    mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome);
+    checkOpenSectionPrimary();
+    pageProject.classList.toggle('none');
+    pageProject.classList.toggle('active');
+});
+document.querySelector('#envelopSvg').addEventListener('click', function() {
+    for (let i = 0; i < listMenu.length; i++) {
+        checkOtherOpen(listMenu[i], listCross[i]);
+    }
+    checkOpenSectionPrimary();
+    pageContact.classList.toggle('none');
+    pageContact.classList.toggle('active');
 });
 document.querySelector('#aboutMenuButton').addEventListener('click', function() {
     subMenu(pageAbout);

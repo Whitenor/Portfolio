@@ -255,7 +255,6 @@ header > div {
     box-sizing: border-box;
     flex-direction: column;
 }
-
 .firstModalRow{
     width: 100%;
     height: 40vh;
@@ -340,6 +339,47 @@ header > div {
 .linkProject{
     height: 30%;
     width: 30%;
+}
+.contact{
+    width: 60vw;
+    height: 100vh;
+}
+.contact > p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}
+.form{
+    width: 50vw;
+    height: 30vh;
+    box-sizing: border-box;
+}
+.form > textarea{
+    height: 100%;
+    width: 60%;
+    resize: none;
+    background: #939A99;
+    padding: 0;
+    border: none;
+}
+.form > .leftCol{
+    height: 100%;
+    width: 30%;
+}
+.form > .leftCol > input{
+    width: 100%;
+    height: 30px;
+    background: #939A99;
+    border: none;
+}
+.form > .leftCol > input:focus-visible, .form > textarea:focus-visible {
+    outline: none;
+}
+.form > .leftCol > input::placeholder, .form > textarea::placeholder {
+    color: #fff;
+    font-family: 'Biryani', sans-serif;
 }
 
 
