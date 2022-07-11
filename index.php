@@ -23,6 +23,11 @@ if(isset($_POST['mailform'])) {
       ';
       mail("antoine.pironsio@gmail.com", "Sujet du message", $message, $header);
       $msg="Votre message a bien été envoyé !";
+        $_POST['lastName'] = '';
+        $_POST['firstName'] = '';
+        $_POST['phone'] = '';
+        $_POST['mail'] = '';
+        $_POST['messageForm'] = '';
    } else {
       $msg="Tous les champs doivent être complétés !";
    }
@@ -58,9 +63,7 @@ if(isset($_POST['mailform'])) {
                         </svg>  
                     </li>
                     <li class="flexNormal jccaic">
-                        <a href="#">
-                            <img src="assets/img/envelop.svg" alt="Enveloppe menant à la page de contact" id="envelopSvg">
-                        </a>
+                        <img src="assets/img/envelop.svg" alt="Enveloppe menant à la page de contact" id="envelopSvg">
                     </li>
                     <li class="flexNormal jccaic">
                         <a href="https://www.linkedin.com/in/antoine-piron/" target="_blank">
