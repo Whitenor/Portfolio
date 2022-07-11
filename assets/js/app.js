@@ -21,6 +21,11 @@ var closeModal = document.querySelector('.closeModal');
 var sideMenuProjectButton = document.querySelectorAll('.sideMenuFolder > ul > li >h2');
 var listMenu = [sideMenuFolder, sideMenuHome];
 var listCross = [crossFolder, crossHome];
+var firstName = document.querySelector('#firstName');
+var lastName = document.querySelector('#lastName');
+var phone = document.querySelector('#phone');
+var mail = document.querySelector('#mail');
+var messageForm = document.querySelector('#messageForm');
 var sectionCheckNow = '';
 var borderChecking = 0;
 var openChecking = 0;
@@ -157,4 +162,12 @@ for (let i = 0; i < sideMenuProjectButton.length; i++) {
 }
 closeModal.addEventListener('click', function() {
     modal.classList.toggle('none');
+})
+document.querySelector('.form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    firstName.value = '';
+    lastName.value = '';
+    mail.value = '';
+    messageForm.value = '';
+    phone.value = '';
 })

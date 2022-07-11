@@ -23,11 +23,6 @@ if(isset($_POST['mailform'])) {
       ';
       mail("antoine.pironsio@gmail.com", "Sujet du message", $message, $header);
       $msg="Votre message a bien été envoyé !";
-        $_POST['lastName'] = '';
-        $_POST['firstName'] = '';
-        $_POST['phone'] = '';
-        $_POST['mail'] = '';
-        $_POST['messageForm'] = '';
    } else {
       $msg="Tous les champs doivent être complétés !";
    }
@@ -208,10 +203,10 @@ if(isset($_POST['mailform'])) {
                 <p>contactez moi via ce formulaire</p>
                 <form class="form flexNormal jcsbaic" method="POST" action="">
                     <div class="leftCol flexColumn jcsbaic">
-                        <input type="text" name="firstName" placeholder="Prénom" value="<?php if(isset($_POST['firstName'])) { echo $_POST['firstName']; } ?>">
-                        <input type="text" name="lastName" placeholder="Nom" value="<?php if(isset($_POST['lastName'])) { echo $_POST['lastName']; } ?>">
-                        <input type="tel" name="phone" placeholder="Téléphone" value="<?php if(isset($_POST['phone'])) { echo $_POST['phone']; } ?>">
-                        <input type="email" name="mail" placeholder="Email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
+                        <input type="text" name="firstName" placeholder="Prénom" value="<?php if(isset($_POST['firstName'])) { echo $_POST['firstName']; } ?>" id="firstName">
+                        <input type="text" name="lastName" placeholder="Nom" value="<?php if(isset($_POST['lastName'])) { echo $_POST['lastName']; } ?>" id="lastName">
+                        <input type="tel" name="phone" placeholder="Téléphone" value="<?php if(isset($_POST['phone'])) { echo $_POST['phone']; } ?>" id="phone">
+                        <input type="email" name="mail" placeholder="Email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" id="mail">
                         <input type="submit" value="Envoyer" name="mailform">
                     </div>
                     <textarea name="messageForm" id="messageForm" placeholder="Votre message ..."><?php if(isset($_POST['messageForm'])) { echo $_POST['messageForm']; } ?></textarea>
