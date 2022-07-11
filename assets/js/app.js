@@ -121,12 +121,9 @@ if (sessionStorage.getItem('position') === 'contact') {
     checkOpenSectionPrimary();
     pageContact.classList.toggle('none');
     pageContact.classList.toggle('active');
+    sessionStorage.setItem('position', '');
 }
     
-
-
-
-
 document.querySelector('#homeSvg').addEventListener('click', function() {
     mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder);
 });
