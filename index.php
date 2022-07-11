@@ -1,28 +1,33 @@
 <?php
 if(isset($_POST['mailform'])) {
    if(!empty($_POST['lastName']) AND !empty($_POST['mail']) AND !empty($_POST['messageForm']) AND !empty($_POST['firstName']) AND !empty($_POST['phone'])) {
-      $header="MIME-Version: 1.0\r\n";
-      $header.='From:"nom_d\'expediteur"<votre@mail.com>'."\n";
-      $header.='Content-Type:text/html; charset="uft-8"'."\n";
-      $header.='Content-Transfer-Encoding: 8bit';
-      $message='
-      <html>
-         <body>
-            <div align="center">
-           
-               <u>Nom de l\'expéditeur :</u>'.$_POST['lastName'].'<br />
-               <u>Prénom de l\'expéditeur :</u>'.$_POST['firstName'].'<br />
-               <u>Téléphone de l\'expéditeur :</u>'.$_POST['phone'].'<br />
-               <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
-               <br />
-               '.nl2br($_POST['messageForm']).'
-          
-            </div>
-         </body>
-      </html>
-      ';
-      mail("antoine.pironsio@gmail.com", "Sujet du message", $message, $header);
-      $msg="Votre message a bien été envoyé !";
+        $header="MIME-Version: 1.0\r\n";
+        $header.='From:"nom_d\'expediteur"<votre@mail.com>'."\n";
+        $header.='Content-Type:text/html; charset="uft-8"'."\n";
+        $header.='Content-Transfer-Encoding: 8bit';
+        $message='
+        <html>
+            <body>
+                <div align="center">
+            
+                <u>Nom de l\'expéditeur :</u>'.$_POST['lastName'].'<br />
+                <u>Prénom de l\'expéditeur :</u>'.$_POST['firstName'].'<br />
+                <u>Téléphone de l\'expéditeur :</u>'.$_POST['phone'].'<br />
+                <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
+                <br />
+                '.nl2br($_POST['messageForm']).'
+            
+                </div>
+            </body>
+        </html>
+        ';
+        mail("antoine.pironsio@gmail.com", "Sujet du message", $message, $header);
+        $msg="Votre message a bien été envoyé !";
+        $_POST['lastName']='';
+        $_POST['firstName']='';
+        $_POST['phone']='';
+        $_POST['mail']='';
+        $_POST['messageForm']='';
    } else {
       $msg="Tous les champs doivent être complétés !";
    }
@@ -211,7 +216,7 @@ if(isset($_POST['mailform'])) {
                     </div>
                     <textarea name="messageForm" id="messageForm" placeholder="Votre message ..."><?php if(isset($_POST['messageForm'])) { echo $_POST['messageForm']; } ?></textarea>
                 </form>
-                <?php if(isset($msg)) {echo $msg;}?>
+                <p id="validateForm"><?php if(isset($msg)) {echo $msg;}?></p>
                 <p>Ou bien via ces moyens:</p>
                 <div class="rowContact flexNormal">
                     <p>Tel: <a href="tel:+33767149691">07.67.14.96.91</a></p>

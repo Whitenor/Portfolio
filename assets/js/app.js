@@ -113,6 +113,20 @@ function openModalCard(cibleClic){
         
     }
 }
+
+if (sessionStorage.getItem('position') === 'contact') {
+    for (let i = 0; i < listMenu.length; i++) {
+        checkOtherOpen(listMenu[i], listCross[i]);
+    }
+    checkOpenSectionPrimary();
+    pageContact.classList.toggle('none');
+    pageContact.classList.toggle('active');
+}
+    
+
+
+
+
 document.querySelector('#homeSvg').addEventListener('click', function() {
     mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder);
 });
@@ -129,6 +143,7 @@ document.querySelector('#envelopSvg').addEventListener('click', function() {
     checkOpenSectionPrimary();
     pageContact.classList.toggle('none');
     pageContact.classList.toggle('active');
+    sessionStorage.setItem('position', 'contact');
 });
 document.querySelector('#aboutMenuButton').addEventListener('click', function() {
     subMenu(pageAbout);
@@ -163,11 +178,17 @@ for (let i = 0; i < sideMenuProjectButton.length; i++) {
 closeModal.addEventListener('click', function() {
     modal.classList.toggle('none');
 })
-document.querySelector('.form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    firstName.value = '';
-    lastName.value = '';
-    mail.value = '';
-    messageForm.value = '';
-    phone.value = '';
-})
+// document.querySelector('.form').addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     if (firstName.value !== ''&& lastName.value !== '' && mail.value !== '' && phone.value !== '' && messageForm.value !== '') {
+//         firstName.value = '';
+//         lastName.value = '';
+//         mail.value = '';
+//         messageForm.value = '';
+//         phone.value = '';
+//         document.querySelector('#validateForm').textContent = 'Votre message a bien été envoyé !';
+//     }
+//     else{
+//         document.querySelector('#validateForm').textContent = 'Veuillez remplir tous les champs !';
+//     }
+// })
