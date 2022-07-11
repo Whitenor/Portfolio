@@ -374,6 +374,9 @@ header > div {
     background: #939A99;
     border: none;
 }
+.form > .leftCol > input:last-child:hover{
+    color: red;
+}
 .form > .leftCol > input:focus-visible, .form > textarea:focus-visible {
     outline: none;
 }

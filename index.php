@@ -1,3 +1,35 @@
+<?php
+if(isset($_POST['mailform'])) {
+   if(!empty($_POST['lastName']) AND !empty($_POST['mail']) AND !empty($_POST['messageForm']) AND !empty($_POST['firstName']) AND !empty($_POST['phone'])) {
+      $header="MIME-Version: 1.0\r\n";
+      $header.='From:"nom_d\'expediteur"<votre@mail.com>'."\n";
+      $header.='Content-Type:text/html; charset="uft-8"'."\n";
+      $header.='Content-Transfer-Encoding: 8bit';
+      $message='
+      <html>
+         <body>
+            <div align="center">
+           
+               <u>Nom de l\'expéditeur :</u>'.$_POST['lastName'].'<br />
+               <u>Prénom de l\'expéditeur :</u>'.$_POST['firstName'].'<br />
+               <u>Téléphone de l\'expéditeur :</u>'.$_POST['phone'].'<br />
+               <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
+               <br />
+               '.nl2br($_POST['messageForm']).'
+          
+            </div>
+         </body>
+      </html>
+      ';
+      mail("antoine.pironsio@gmail.com", "Sujet du message", $message, $header);
+      $msg="Votre message a bien été envoyé !";
+   } else {
+      $msg="Tous les champs doivent être complétés !";
+   }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -171,15 +203,17 @@
             <section class="contact none flexColumn jcsaaic">
                 <h1>Contacts</h1>
                 <p>contactez moi via ce formulaire</p>
-                <div class="form flexNormal jcsbaic">
+                <form class="form flexNormal jcsbaic" method="POST" action="">
                     <div class="leftCol flexColumn jcsbaic">
-                        <input type="text" placeholder="Prénom">
-                        <input type="text" placeholder="Nom">
-                        <input type="tel" placeholder="Téléphone">
-                        <input type="email" placeholder="Email">
+                        <input type="text" name="firstName" placeholder="Prénom" value="<?php if(isset($_POST['firstName'])) { echo $_POST['firstName']; } ?>">
+                        <input type="text" name="lastName" placeholder="Nom" value="<?php if(isset($_POST['lastName'])) { echo $_POST['lastName']; } ?>">
+                        <input type="tel" name="phone" placeholder="Téléphone" value="<?php if(isset($_POST['phone'])) { echo $_POST['phone']; } ?>">
+                        <input type="email" name="mail" placeholder="Email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>">
+                        <input type="submit" value="Envoyer" name="mailform">
                     </div>
-                    <textarea name="messageForm" id="messageForm" placeholder="Votre message ..."></textarea>
-                </div>
+                    <textarea name="messageForm" id="messageForm" placeholder="Votre message ..."><?php if(isset($_POST['messageForm'])) { echo $_POST['messageForm']; } ?></textarea>
+                </form>
+                <?php if(isset($msg)) {echo $msg;}?>
                 <p>Ou bien via ces moyens:</p>
                 <div class="rowContact flexNormal">
                     <p>Tel: <a href="tel:+33767149691">07.67.14.96.91</a></p>
