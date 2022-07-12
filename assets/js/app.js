@@ -113,7 +113,6 @@ function openModalCard(cibleClic){
         
     }
 }
-
 if (sessionStorage.getItem('position') === 'contact') {
     for (let i = 0; i < listMenu.length; i++) {
         checkOtherOpen(listMenu[i], listCross[i]);
@@ -123,9 +122,6 @@ if (sessionStorage.getItem('position') === 'contact') {
     pageContact.classList.toggle('active');
     sessionStorage.removeItem('position');
 }
-console.log(sessionStorage.length);
-
-    
 document.querySelector('#homeSvg').addEventListener('click', function() {
     mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder);
 });
@@ -177,17 +173,3 @@ for (let i = 0; i < sideMenuProjectButton.length; i++) {
 closeModal.addEventListener('click', function() {
     modal.classList.toggle('none');
 })
-// document.querySelector('.form').addEventListener('submit', function(e) {
-//     e.preventDefault();
-//     if (firstName.value !== ''&& lastName.value !== '' && mail.value !== '' && phone.value !== '' && messageForm.value !== '') {
-//         firstName.value = '';
-//         lastName.value = '';
-//         mail.value = '';
-//         messageForm.value = '';
-//         phone.value = '';
-//         document.querySelector('#validateForm').textContent = 'Votre message a bien été envoyé !';
-//     }
-//     else{
-//         document.querySelector('#validateForm').textContent = 'Veuillez remplir tous les champs !';
-//     }
-// })

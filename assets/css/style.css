@@ -137,6 +137,8 @@ header > div {
 }
 #content{
     margin: auto;
+    box-sizing: border-box;
+    height: 100vh;
 }
 .about{
     height: 100vh;
@@ -230,7 +232,7 @@ header > div {
     align-items: flex-start;
 }
 .project{
-    width: 75vh;
+    width: 60vw;
     flex-wrap: wrap;
     gap: 50px;
 }
@@ -387,7 +389,23 @@ header > div {
 
 
 @media screen and (max-width: 1024px) {
+    h1{
+        font-size: 28px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px
+    }
     .rowButton{
         width: 60vw;
+    }
+    #content{
+        overflow: scroll;
+    }
+    .project{
+        width: 50vw;
+        justify-content: center;
     }
 }
