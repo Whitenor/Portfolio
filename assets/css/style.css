@@ -428,6 +428,7 @@ header > div {
     }
     .leftBlock >.leftCol, .leftBlock>.rightCol{
         width: 100%;
+        gap: 10px;
     }
     .descriptionProject{
         overflow: scroll;
