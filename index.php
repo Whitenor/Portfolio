@@ -34,7 +34,6 @@ if(isset($_POST['mailform'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>

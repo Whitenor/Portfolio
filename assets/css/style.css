@@ -409,3 +409,33 @@ header > div {
         justify-content: center;
     }
 }
+@media screen and (max-width: 512px){
+    header{
+        width: 50px;
+        padding: 10px 0;
+    }
+    .sideMenuFolder, .sideMenuHome{
+        width: 25vw;
+    }
+    h2{
+        font-size: 12px;
+    }
+    .modal{
+        padding: 50px;
+    }
+    .leftBlock{
+        flex-direction: column;
+    }
+    .leftBlock >.leftCol, .leftBlock>.rightCol{
+        width: 100%;
+    }
+    .descriptionProject{
+        overflow: scroll;
+    }
+    .leftBlock > .rightCol > p {
+        text-align: center;
+    }
+    .leftBlock > .leftCol > h2{
+        text-align: center;
+    }
+}
