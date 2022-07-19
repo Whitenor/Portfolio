@@ -232,6 +232,7 @@ header > div {
     align-items: flex-start;
 }
 .project{
+    padding: 10px;
     width: 60vw;
     flex-wrap: wrap;
     gap: 50px;
@@ -239,6 +240,7 @@ header > div {
 .project > .card > img{
     width: 320px;
     height: 180px;
+    object-fit: cover;
 }
 .project > .card > p{
     text-align: center;
@@ -438,5 +440,8 @@ header > div {
     }
     .leftBlock > .leftCol > h2{
         text-align: center;
+    }
+    .project > .card > img{
+        max-width: 30vw;
     }
 }
