@@ -481,6 +481,9 @@ header > div {
     .otherComp{
         flex-direction: column;
     }
+    .techAndComp{
+        overflow: hidden;
+    }
     .techno > div{
         width: 100%;
         gap: 5px;
