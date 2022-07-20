@@ -51,7 +51,7 @@ function checkBorder(target){
         target.classList.toggle('borderNone');
         borderChecking = 0;
     }
-}
+}//TODO: fusionner avec les autres fonctions de menu principal
 function checkOtherOpen(firstTarget, crossTarget ){
     for (let i = 0; i < firstTarget.classList.length; i++) {
         if(firstTarget.classList[i] === 'open'){
@@ -83,7 +83,7 @@ function checkOpenSectionPrimary(){
         sectionCheckNow = allSection[i];
         checkOpenSectionSecondary(sectionCheckNow);
     };
-}
+}//TODO: fusionner avec la secondary puis revoir le fonctionnement pour permettre la fermeture des menu sans géner le bon fonctionnement des menus principaux
 function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck, pageTarget){
     crossToRotate.classList.toggle('crossRotate');
     menuFocus.classList.toggle('hide');
