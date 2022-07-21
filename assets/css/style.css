@@ -400,7 +400,6 @@ header > div {
     justify-content: space-around;
     align-items: center;
 }
-
 @media screen and (max-width: 1024px) {
     h1{
         font-size: 28px;

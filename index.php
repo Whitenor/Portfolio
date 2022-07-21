@@ -41,7 +41,7 @@ if(isset($_POST['mailform'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ceci est le portfolio de Antoine Piron, rassemblant ces compétences ainsi que certains projets sur lequel il a pu travailler">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
     <title>Antoine Piron</title>
 </head>
