@@ -21,14 +21,6 @@ var closeModal = document.querySelector('.closeModal');
 var sideMenuProjectButton = document.querySelectorAll('.sideMenuFolder > ul > li >h2');
 var listMenu = [sideMenuFolder, sideMenuHome];
 var listCross = [crossFolder, crossHome];
-var firstName = document.querySelector('#firstName');
-var lastName = document.querySelector('#lastName');
-var phone = document.querySelector('#phone');
-var mail = document.querySelector('#mail');
-var messageForm = document.querySelector('#messageForm');
-var sectionCheckNow = '';
-var borderChecking = 0;
-var openChecking = 0;
 const projectList = [
     {name: "popCode", description: "Basé sur les sites Popcorn garage et Popcorn TV , il nous a été demandé de crée une déclinaison basé les langages de programmations. La maquette nous était fournie par Alain Merucci et le cahier des charges ne contenait que peu de restrictions au niveau des technos pouvant être utilisés. Le responsive ne devait être qu'en partie gérer et afficher un message pour l'utilisateur si celui ci est une tablette ou un téléphone", link:"https://www.popcode.a-piron.fr", screenshot:"assets/img/popcode.jpg", periode:"du 25 Juin 2022 au 22 Juillet 2022", typeProjet:"Solo", techno:"HTML, CSS, JavaScript, Github , Git"},
     {name: "Creative", description: "Le but de ce projet était de réaliser une intégration basique avec HTML / CSS et Javascript. Le choix des technos n'avait qu'une seule restriction qui était de ne pas utiliser de framework CSS comme Bootstrap. nous étions incité à ajouter des animations en plus par rapport à la maquette.", link:"/devWebWebMobile/Creatives", screenshot:"assets/img/creative.jpg", periode:"du 17 au 23 Mai 2022",typeProjet:"En groupe",techno:"HTML, CSS, JavaScript, Github , Git"},
@@ -37,54 +29,32 @@ const projectList = [
     {name: "Allojyve", description:"Ce projet nous a servis d'introduction à l'utilisation d'API ainsi qu'a la création dynamique via Javascript. Son but était de récupérer une liste de films à partir de l'API de The Movie Database et de les afficher afin de voir les films selon différents critéres. Les contraintes  pour ce projet étaient l'utilisation de l'API de The Movie Database et l'interdiction d'écriture de code en dur dans le HTML, tout devait etre généré à partir du Javascript.", link:"https://www.allojyve.a-piron.fr", screenshot:"assets/img/allojyve.jpg", periode:"du 30 Mars au 24 Avril 2022",typeProjet:"En groupe",techno:"HTML, CSS, JavaScript, Github , Git"}
 ]
 function checkBorder(target){
-    for (let i = 0; i < target.classList.length; i++) {
-        if(target.classList[i] === 'borderNone'){
-            borderChecking = 1
-        }
-    }
-    if(borderChecking === 0){
+    if(target.classList.contains('borderNone') === false){
         setTimeout(() => {
             target.classList.toggle('borderNone');
         }, 500);
     }
     else{
         target.classList.toggle('borderNone');
-        borderChecking = 0;
     }
 }//TODO: fusionner avec les autres fonctions de menu principal
 function checkOtherOpen(firstTarget, crossTarget ){
-    for (let i = 0; i < firstTarget.classList.length; i++) {
-        if(firstTarget.classList[i] === 'open'){
-            openChecking = 1;
-        }
-    }
-    if (openChecking === 1) {
+    if (firstTarget.classList.contains('open') === true) {
         firstTarget.classList.toggle('open');
         firstTarget.classList.toggle('hide');
         crossTarget.classList.toggle('crossRotate');
-        openChecking = 0;
-        checkBorder(firstTarget);
-    }
-}
-function checkOpenSectionSecondary(target){
-    for (let i = 0; i < target.classList.length; i++) {
-        if(target.classList[i] === 'active'){
-            openChecking = 1;
-        }
-    }
-    if (openChecking === 1) {
-        target.classList.toggle('active');
-        target.classList.toggle('none');
-        openChecking = 0;
+            checkBorder(firstTarget);
     }
 }
 function checkOpenSectionPrimary(){
     for (let i = 0; i < allSection.length; i++){
-        sectionCheckNow = allSection[i];
-        checkOpenSectionSecondary(sectionCheckNow);
+        if (allSection[i].classList.contains('active') === true) {
+            allSection[i].classList.toggle('active');
+            allSection[i].classList.toggle('none');
+        }
     };
 }//TODO: fusionner avec la secondary puis revoir le fonctionnement pour permettre la fermeture des menu sans géner le bon fonctionnement des menus principaux
-function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck, pageTarget){
+function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck){
     crossToRotate.classList.toggle('crossRotate');
     menuFocus.classList.toggle('hide');
     menuFocus.classList.toggle('open');
@@ -112,6 +82,12 @@ function openModalCard(cibleClic){
         }
         
     }
+}
+function subMenuHome(){
+    crossHome.classList.toggle('crossRotate');
+    sideMenuHome.classList.toggle('hide');
+    sideMenuHome.classList.toggle('open');
+    checkBorder(sideMenuHome);
 }
 if (sessionStorage.getItem('position') === 'contact') {
     for (let i = 0; i < listMenu.length; i++) {
@@ -142,12 +118,15 @@ document.querySelector('#envelopSvg').addEventListener('click', function() {
 });
 document.querySelector('#aboutMenuButton').addEventListener('click', function() {
     subMenu(pageAbout);
+    subMenuHome();
 })
 document.querySelector('#formationsMenuButton').addEventListener('click', function() {
     subMenu(pageFormation);
+    subMenuHome();
 })
 document.querySelector('#techAndComp').addEventListener('click', function() {
     subMenu(pageTechAndComp);
+    subMenuHome();
 });
 document.querySelector('#technoButtonAbout').addEventListener('click', function() {
     subMenu(pageTechAndComp);
