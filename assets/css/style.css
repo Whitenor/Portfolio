@@ -498,4 +498,8 @@ header > div {
     .language > p, .compDivers > p{
         text-align: center;
     }
+    .formations > .card{
+        width: 100%;
+        height: auto;
+    }
 }

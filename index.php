@@ -16,7 +16,6 @@ if(isset($_POST['mailform'])) {
                 <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
                 <br />
                 '.nl2br($_POST['messageForm']).'
-            
                 </div>
             </body>
         </html>
@@ -114,22 +113,22 @@ if(isset($_POST['mailform'])) {
                 </div>
             </section>
             <section class="formations flexNormal jcsaaic none">
-                <div class="card flexColumn jcsaaic">
+                <div class="card flexColumn jcsaaic" id="DWWM">
                     <p>Titre Professionnel</p> 
                     <p>Développeur Web et Web Mobile</p>
                      <p>Access Code School</p>
                     </div>
-                <div class="card flexColumn jcsaaic">
+                <div class="card flexColumn jcsaaic" id="futurDev">
                     <p>Formation préqualifiante</p>
                     <p>Futur dév</p>
                     <p>OnlineFormaPro</p>
                 </div>
-                <div class="card flexColumn jcsaaic">
+                <div class="card flexColumn jcsaaic" id="btsSio">
                     <p>Brevet de Technicien Supérieur</p>
                     <p>SIO option SISR</p>
                     <p>Lycée Fulbert, Chartres</p>
                 </div>
-                <div class="card flexColumn jcsaaic">
+                <div class="card flexColumn jcsaaic" id="bacPro">
                     <p>Baccalauréat Professionnel</p>
                     <p>SEN option TR</p>
                     <p>Lycée Sully, Nogent Le Rotrou</p>
@@ -222,6 +221,21 @@ if(isset($_POST['mailform'])) {
                     <p>Tel: <a href="tel:+33767149691">07.67.14.96.91</a></p>
                     <p>Email: <a href="mailto:antoine.pironsio@gmail.com" target="_blank">antoine.pironsio@gmail.com</a></p>
                     <p>Linkedin: <a href="https://www.linkedin.com/in/antoine-piron/" target="_blank">Antoine Piron</a></p>
+                </div>
+            </section>
+            <section class="modalFormation none">
+                <div class="modalFormationContent">
+                    <div class="rowFormation1">
+                        <h2 class="titleFormation"></h2>
+                        <p class="closeModalFormation">X</p>
+                    </div>
+                    <div class="rowFormation2">
+                        <div class="optionFormation"></div>
+                        <div class="obtentionFormation"></div>
+                    </div>
+                    <div class="rowFormation3">
+                        <p class="descriptionFormation"></p>
+                    </div>
                 </div>
             </section>
         </section>

@@ -21,6 +21,14 @@ var closeModal = document.querySelector('.closeModal');
 var sideMenuProjectButton = document.querySelectorAll('.sideMenuFolder > ul > li >h2');
 var listMenu = [sideMenuFolder, sideMenuHome];
 var listCross = [crossFolder, crossHome];
+var dwwm = document.querySelector('#DWWM');
+var futurDev = document.querySelector('#futurDev');
+var btsSio = document.querySelector('#btsSio');
+var bacPro = document.querySelector('#bacPro');
+var titleFormation = document.querySelector('.titleFormation');
+var optionFormation = document.querySelectorAll('.optionFormation');
+var obtentionFormation = document.querySelector('.obtentionFormation');
+var descriptionFormation = document.querySelector('.descriptionFormation');
 const projectList = [
     {name: "popCode", description: "Basé sur les sites Popcorn garage et Popcorn TV , il nous a été demandé de crée une déclinaison basé les langages de programmations. La maquette nous était fournie par Alain Merucci et le cahier des charges ne contenait que peu de restrictions au niveau des technos pouvant être utilisés. Le responsive ne devait être qu'en partie gérer et afficher un message pour l'utilisateur si celui ci est une tablette ou un téléphone", link:"https://www.popcode.a-piron.fr", screenshot:"assets/img/popcode.jpg", periode:"du 25 Juin 2022 au 22 Juillet 2022", typeProjet:"Solo", techno:"HTML, CSS, JavaScript, Github , Git"},
     {name: "Creative", description: "Le but de ce projet était de réaliser une intégration basique avec HTML / CSS et Javascript. Le choix des technos n'avait qu'une seule restriction qui était de ne pas utiliser de framework CSS comme Bootstrap. nous étions incité à ajouter des animations en plus par rapport à la maquette.", link:"/devWebWebMobile/Creatives", screenshot:"assets/img/creative.jpg", periode:"du 17 au 23 Mai 2022",typeProjet:"En groupe",techno:"HTML, CSS, JavaScript, Github , Git"},
@@ -37,7 +45,7 @@ function checkBorder(target){
     else{
         target.classList.toggle('borderNone');
     }
-}//TODO: fusionner avec les autres fonctions de menu principal
+}
 function checkOtherOpen(firstTarget, crossTarget ){
     if (firstTarget.classList.contains('open') === true) {
         firstTarget.classList.toggle('open');
@@ -53,7 +61,7 @@ function checkOpenSectionPrimary(){
             allSection[i].classList.toggle('none');
         }
     };
-}//TODO: fusionner avec la secondary puis revoir le fonctionnement pour permettre la fermeture des menu sans géner le bon fonctionnement des menus principaux
+}
 function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck){
     crossToRotate.classList.toggle('crossRotate');
     menuFocus.classList.toggle('hide');
@@ -151,4 +159,40 @@ for (let i = 0; i < sideMenuProjectButton.length; i++) {
 }
 closeModal.addEventListener('click', function() {
     modal.classList.toggle('none');
+})
+dwwm.addEventListener('click', function() {
+    fetch('assets/js/formations.json').then(response => response.json()).then(data => {
+        titleFormation.textContent = data.DWWM.type+' '+ data.DWWM.nom;
+        console.log(optionFormation);
+        optionFormation.textContent = data.DWWM.option;
+        obtentionFormation.textContent = data.DWWM.obtention;
+        descriptionFormation.textContent = data.DWWM.description;
+    });
+})
+futurDev.addEventListener('click', function() {
+    fetch('assets/js/formations.json').then(response => response.json()).then(data => {
+        titleFormation.textContent = data.futurDev.type+' '+ data.futurDev.nom;
+        optionFormation.textContent = data.futurDev.option;
+        console.log(optionFormation);
+        obtentionFormation.textContent = data.futurDev.obtention;
+        descriptionFormation.textContent = data.futurDev.description;
+    });
+})
+btsSio.addEventListener('click', function() {
+    fetch('assets/js/formations.json').then(response => response.json()).then(data => {
+        titleFormation.textContent = data.btsSio.type+' '+ data.btsSio.nom;
+        optionFormation.textContent = data.btsSio.option;
+        console.log(optionFormation);
+        obtentionFormation.textContent = data.btsSio.obtention;
+        descriptionFormation.textContent = data.btsSio.description;
+    });
+})
+bacPro.addEventListener('click', function() {
+    fetch('assets/js/formations.json').then(response => response.json()).then(data => {
+        titleFormation.textContent = data.bacPro.type+' '+ data.bacPro.nom;
+        console.log(optionFormation);
+        optionFormation.textContent = data.bacPro.option;
+        obtentionFormation.textContent = data.bacPro.obtention;
+        descriptionFormation.textContent = data.bacPro.description;
+    });
 })
