@@ -400,6 +400,39 @@ header > div {
     justify-content: space-around;
     align-items: center;
 }
+.modalFormation{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalFormationContent{
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.modalFormationContent > .rowFormation1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modalFormationContent > .rowFormation1 > p{
+    font-size: 40px;
+    cursor: pointer;
+}
+.modalFormationContent > .rowFormation3 > p, .modalFormationContent > .rowFormation2 >p{
+    font-size: 20px;
+}
 @media screen and (max-width: 1024px) {
     h1{
         font-size: 28px;

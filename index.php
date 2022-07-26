@@ -230,8 +230,8 @@ if(isset($_POST['mailform'])) {
                         <p class="closeModalFormation">X</p>
                     </div>
                     <div class="rowFormation2">
-                        <div class="optionFormation"></div>
-                        <div class="obtentionFormation"></div>
+                        <p class="optionFormation"></p>
+                        <p class="obtentionFormation"></p>
                     </div>
                     <div class="rowFormation3">
                         <p class="descriptionFormation"></p>

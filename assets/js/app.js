@@ -1,4 +1,5 @@
 var sideMenuFolder = document.querySelector('.sideMenuFolder');
+var modalFormation = document.querySelector('.modalFormation');
 var sideMenuHome = document.querySelector('.sideMenuHome');
 var crossHome = document.querySelector('#crossHome');
 var crossFolder = document.querySelector('#crossFolder');
@@ -26,7 +27,7 @@ var futurDev = document.querySelector('#futurDev');
 var btsSio = document.querySelector('#btsSio');
 var bacPro = document.querySelector('#bacPro');
 var titleFormation = document.querySelector('.titleFormation');
-var optionFormation = document.querySelectorAll('.optionFormation');
+var optionFormation = document.querySelector('.optionFormation');
 var obtentionFormation = document.querySelector('.obtentionFormation');
 var descriptionFormation = document.querySelector('.descriptionFormation');
 const projectList = [
@@ -35,7 +36,7 @@ const projectList = [
     {name:"Capgemen", description: "L'objectif de ce projet était de réaliser une intégration avec comme contrainte d'utiliser le framework CSS Bootstrap. La maquette nous était fournie.", link:"/devWebWebMobile/FirstBootstrap", screenshot:"assets/img/capgemen.jpg", periode:"du 7 au 14 Juin 2022",typeProjet:"Solo",techno:"HTML, CSS, Bootstrap, JavaScript, Github , Git"},
     {name:"Technews", description: "Ce projet est un projet de stage, il avait pour but de créer un site avec le CMS Wordpress centré sur les métiers lié au développement informatique. Il ne faisait pas partie des choses que nous deviosn voir lors de la formation à ce moment la mais cela nous a donné un bon aperçus de la suite. La gestion du projet était faite par le formateur (Loic Dauchy). Il s'est déroulé en deux temps. Tout d'abord du 25 au 27 Avril 2022 , avec la répartition en deux groupes, l'un dédié à la création de la maquette, l'autre à la recherche de données pour constituer un jeu d'essai. La seconde partie du projet à eu lieu du 28 Avril au 05 Mai 2022 avec une nouvelle répartition en deux équipes. La première centré sur l'intégration de la maquette via HTML/CSS, la seconde centré sur tout les appels de données afin de faire fonctionner le site proprement. Pour les deux parties j'ai d'abord fait partie du groupe Maquette puis du groupe Appel de Données Pour des raisons d'hébergement actuel , je ne l'ai pas remis en ligne", link:"", screenshot:"assets/img/technews.jpg", periode:"du 25 Avril au 05 Mai 2022",typeProjet:"En groupe",techno:"HTML, CSS, JavaScript, Github , Git, PHP, Wordpress"},
     {name: "Allojyve", description:"Ce projet nous a servis d'introduction à l'utilisation d'API ainsi qu'a la création dynamique via Javascript. Son but était de récupérer une liste de films à partir de l'API de The Movie Database et de les afficher afin de voir les films selon différents critéres. Les contraintes  pour ce projet étaient l'utilisation de l'API de The Movie Database et l'interdiction d'écriture de code en dur dans le HTML, tout devait etre généré à partir du Javascript.", link:"https://www.allojyve.a-piron.fr", screenshot:"assets/img/allojyve.jpg", periode:"du 30 Mars au 24 Avril 2022",typeProjet:"En groupe",techno:"HTML, CSS, JavaScript, Github , Git"}
-]
+];
 function checkBorder(target){
     if(target.classList.contains('borderNone') === false){
         setTimeout(() => {
@@ -45,7 +46,7 @@ function checkBorder(target){
     else{
         target.classList.toggle('borderNone');
     }
-}
+};
 function checkOtherOpen(firstTarget, crossTarget ){
     if (firstTarget.classList.contains('open') === true) {
         firstTarget.classList.toggle('open');
@@ -53,7 +54,7 @@ function checkOtherOpen(firstTarget, crossTarget ){
         crossTarget.classList.toggle('crossRotate');
             checkBorder(firstTarget);
     }
-}
+};
 function checkOpenSectionPrimary(){
     for (let i = 0; i < allSection.length; i++){
         if (allSection[i].classList.contains('active') === true) {
@@ -61,19 +62,19 @@ function checkOpenSectionPrimary(){
             allSection[i].classList.toggle('none');
         }
     };
-}
+};
 function mainButton(crossToRotate, menuFocus, menuToCheck, crossToCheck){
     crossToRotate.classList.toggle('crossRotate');
     menuFocus.classList.toggle('hide');
     menuFocus.classList.toggle('open');
     checkOtherOpen(menuToCheck, crossToCheck);
     checkBorder(menuFocus);
-}
+};
 function subMenu(target) {
     checkOpenSectionPrimary();
     target.classList.toggle('none');
     target.classList.toggle('active');
-}
+};
 function openModalCard(cibleClic){
     for (let i = 0; i < projectList.length; i++) {
         if ('screen'+projectList[i].name === cibleClic || 'title'+projectList[i].name === cibleClic || projectList[i].name=== cibleClic) {
@@ -90,13 +91,13 @@ function openModalCard(cibleClic){
         }
         
     }
-}
+};
 function subMenuHome(){
     crossHome.classList.toggle('crossRotate');
     sideMenuHome.classList.toggle('hide');
     sideMenuHome.classList.toggle('open');
     checkBorder(sideMenuHome);
-}
+};
 if (sessionStorage.getItem('position') === 'contact') {
     for (let i = 0; i < listMenu.length; i++) {
         checkOtherOpen(listMenu[i], listCross[i]);
@@ -105,7 +106,7 @@ if (sessionStorage.getItem('position') === 'contact') {
     pageContact.classList.toggle('none');
     pageContact.classList.toggle('active');
     sessionStorage.removeItem('position');
-}
+};
 document.querySelector('#homeSvg').addEventListener('click', function() {
     mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder);
 });
@@ -150,49 +151,53 @@ for (let i = 0; i < cardProject.length; i++) {
         openModalCard(e.target.id);
     });
     
-}
+};
 for (let i = 0; i < sideMenuProjectButton.length; i++) {
     sideMenuProjectButton[i].addEventListener('click', function(e) {
         openModalCard(e.target.id);
         mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome, pageProject);
     });    
-}
+};
 closeModal.addEventListener('click', function() {
     modal.classList.toggle('none');
-})
+});
 dwwm.addEventListener('click', function() {
     fetch('assets/js/formations.json').then(response => response.json()).then(data => {
         titleFormation.textContent = data.DWWM.type+' '+ data.DWWM.nom;
-        console.log(optionFormation);
-        optionFormation.textContent = data.DWWM.option;
         obtentionFormation.textContent = data.DWWM.obtention;
         descriptionFormation.textContent = data.DWWM.description;
     });
-})
+    modalFormation.classList.toggle('none');
+});
 futurDev.addEventListener('click', function() {
     fetch('assets/js/formations.json').then(response => response.json()).then(data => {
         titleFormation.textContent = data.futurDev.type+' '+ data.futurDev.nom;
-        optionFormation.textContent = data.futurDev.option;
-        console.log(optionFormation);
         obtentionFormation.textContent = data.futurDev.obtention;
         descriptionFormation.textContent = data.futurDev.description;
     });
-})
+    modalFormation.classList.toggle('none');
+});
 btsSio.addEventListener('click', function() {
     fetch('assets/js/formations.json').then(response => response.json()).then(data => {
         titleFormation.textContent = data.btsSio.type+' '+ data.btsSio.nom;
-        optionFormation.textContent = data.btsSio.option;
-        console.log(optionFormation);
-        obtentionFormation.textContent = data.btsSio.obtention;
+        optionFormation.textContent = "Option: "+data.btsSio.option;
+        obtentionFormation.textContent = "Obention: "+data.btsSio.obtention;
         descriptionFormation.textContent = data.btsSio.description;
     });
-})
+    modalFormation.classList.toggle('none');
+});
 bacPro.addEventListener('click', function() {
     fetch('assets/js/formations.json').then(response => response.json()).then(data => {
         titleFormation.textContent = data.bacPro.type+' '+ data.bacPro.nom;
-        console.log(optionFormation);
-        optionFormation.textContent = data.bacPro.option;
-        obtentionFormation.textContent = data.bacPro.obtention;
+        optionFormation.textContent = "Option: "+data.bacPro.option;
+        obtentionFormation.textContent = "Obention: "+data.bacPro.obtention;
         descriptionFormation.textContent = data.bacPro.description;
     });
+    modalFormation.classList.toggle('none');
+});
+modalFormation.addEventListener('click', function(e) {
+    console.log(e.target.classList);
+    if (e.target.classList.contains('modalFormation') || e.target.classList.contains('closeModalFormation')) {
+        modalFormation.classList.toggle('none');
+    }
 })
