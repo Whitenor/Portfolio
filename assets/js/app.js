@@ -164,7 +164,8 @@ closeModal.addEventListener('click', function() {
 dwwm.addEventListener('click', function() {
     fetch('assets/js/formations.json').then(response => response.json()).then(data => {
         titleFormation.textContent = data.DWWM.type+' '+ data.DWWM.nom;
-        obtentionFormation.textContent = data.DWWM.obtention;
+        optionFormation.textContent = "";
+        obtentionFormation.textContent = "Obtention: "+data.DWWM.obtention;
         descriptionFormation.textContent = data.DWWM.description;
     });
     modalFormation.classList.toggle('none');
@@ -172,7 +173,8 @@ dwwm.addEventListener('click', function() {
 futurDev.addEventListener('click', function() {
     fetch('assets/js/formations.json').then(response => response.json()).then(data => {
         titleFormation.textContent = data.futurDev.type+' '+ data.futurDev.nom;
-        obtentionFormation.textContent = data.futurDev.obtention;
+        optionFormation.textContent = "";
+        obtentionFormation.textContent = "Obtention: "+data.futurDev.obtention;
         descriptionFormation.textContent = data.futurDev.description;
     });
     modalFormation.classList.toggle('none');

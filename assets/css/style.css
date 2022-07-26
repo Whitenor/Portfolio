@@ -414,7 +414,7 @@ header > div {
 }
 .modalFormationContent{
     width: 60vw;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -450,8 +450,16 @@ header > div {
         overflow: scroll;
     }
     .project{
-        width: 50vw;
+        width: 70vw;
         justify-content: center;
+        overflow-x: hidden;
+    }
+    .modalFormationContent > .rowFormation1 > h2{
+        max-width: 40vw;
+        text-align: start;
+    }
+    .modalFormationContent > .rowFormation3 > p, .modalFormationContent > .rowFormation2 >p{
+        text-align: start;
     }
 }
 @media screen and (max-width: 512px){
@@ -534,5 +542,9 @@ header > div {
     .formations > .card{
         width: 100%;
         height: auto;
+    }
+    .modalFormationContent > .rowFormation3 > p, .modalFormationContent > .rowFormation2 >p{
+        font-size: 16px;
+        line-height: 16px;
     }
 }
