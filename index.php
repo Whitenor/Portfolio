@@ -137,30 +137,22 @@ if(isset($_POST['mailform'])) {
             <section class="techAndComp flexColumn jcsaaic none">
                 <div class="technologiesBlock flexColumn jccaic">
                     <p>Technologies en cours d'apprentissage:</p>
-                    <div class="techno flexNormal">
-                        <div class="flexNormal">
-                            <p>HTML</p>
-                            <div class="barHTML">
-                                <div class="fill"></div>
-                            </div>
-                        </div>
-                        <div class="flexNormal">
-                            <p>CSS</p>
-                            <div class="barCSS">
-                                <div class="fill"></div>
-                            </div>
-                        </div>
-                        <div class="flexNormal">
-                            <p>JavaScript</p>
-                            <div class="barJS">
-                                <div class="fill"></div>
-                            </div>
-                        </div>
+                    <div class="techno flexNormal jccaic">
+                    <span class="iconify" data-icon="logos:javascript" data-width="50"></span>
+                    <span class="iconify" data-icon="vscode-icons:file-type-php" data-width="50"></span>
+                    <span class="iconify" data-icon="vscode-icons:file-type-html" data-width="50"></span>
+                    <span class="iconify" data-icon="vscode-icons:file-type-css" data-width="50"></span>
                     </div>
                 </div>
-                <div class="technoFutur">
+                <div class="technoFutur flexColumn">
                     <p>Technologies en objectif d'apprentissage:</p>
-                    <p> PHP, Laravel, base de Symfony, base de ReactJS, VueJs, base d'AngularJS</p>
+                    <div class="flexNormal jccaic">
+                        <span class="iconify" data-icon="cib:laravel" style="color: white;" data-width="50"></span>
+                        <span class="iconify" data-icon="cib:symfony" style="color: white;" data-width="50"></span>
+                        <span class="iconify" data-icon="ri:reactjs-fill" style="color: white;" data-width="50"></span>
+                        <span class="iconify" data-icon="bxl:vuejs" style="color: white;" data-width="50"></span>
+                        <span class="iconify" data-icon="fontisto:angularjs" style="color: white;" data-width="50"></span>
+                    </div>
                 </div>
                 <div class="otherComp flexNormal">
                     <div class="language">

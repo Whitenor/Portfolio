@@ -197,33 +197,15 @@ header > div {
 .techno{
     width: 100%;
     flex-wrap: wrap;
-}
-.techno > div{
-    width: 45%;
-    padding: 10px;
     gap: 20px;
-    justify-content: flex-end;
-    align-items: center;
 }
-.techno > div > div{
-    width: 70%;
-    height: 10px;
-    background-color: #939A99;
+.technoFutur{
+    gap: 50px;
 }
-.barHTML > .fill{
-    height: 100%;
-    background-color: #fff;
-    width: 60%;
-}
-.barJS > .fill{
-    height: 100%;
-    background-color: #fff;
-    width: 60%;
-}
-.barCSS > .fill{
-    height: 100%;
-    background-color: #fff;
-    width: 40%;
+.technoFutur > div{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .otherComp{
     gap: 50px;
