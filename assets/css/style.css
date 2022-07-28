@@ -344,6 +344,12 @@ header > div {
     width: 100%;
     text-align: start;
 }
+.secondModalRow > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .linkRepo{
     height: 30%;
     width: 30%;
@@ -493,6 +499,15 @@ header > div {
     }
     .descriptionProject{
         overflow: scroll;
+    }
+    .secondModalRow > div{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .linkRepo, .linkProject{
+        width: 100%;
+        height: 50%;
+        text-align: center;
     }
     .leftBlock > .rightCol > p {
         text-align: center;
