@@ -31,6 +31,9 @@ li{
     margin: 0;
     list-style: none;
 }
+.textAlign{
+    text-align: center;
+}
 .flexColumn {
     display: flex;
     flex-direction: column;
@@ -248,9 +251,6 @@ header > div {
     height: 180px;
     object-fit: cover;
 }
-.project > .card > p{
-    text-align: center;
-}
 .modal{
     width: 100vw;
     height: 100vh;
@@ -325,7 +325,6 @@ header > div {
 .rightBlock>p{
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    text-align: center;
     margin: 0;
     font-weight: 400;
     cursor: pointer;
@@ -345,6 +344,10 @@ header > div {
     width: 100%;
     text-align: start;
 }
+.linkRepo{
+    height: 30%;
+    width: 30%;
+}
 .linkProject{
     height: 30%;
     width: 30%;
@@ -356,7 +359,6 @@ header > div {
 .contact > p{
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    text-align: center;
     margin: 0;
     font-weight: 400;
 }

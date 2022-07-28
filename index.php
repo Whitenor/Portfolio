@@ -183,28 +183,28 @@ if(isset($_POST['mailform'])) {
             <section class="project none flexNormal">
                 <div class="card" id="popCode">
                     <img src="assets/img/popcode.jpg" alt="Screenshot de popCode" id="screenpopCode">
-                    <p id="titlepopCode">popCode</p>
+                    <p id="titlepopCode" class="textAlign">popCode</p>
                 </div>
                 <div class="card" id="Creative">
                     <img src="assets/img/creative.jpg" alt="Screenshot de l'intégration Creative ACS" id="screenCreative">
-                    <p id="titleCreative">Creative ACS</p>
+                    <p id="titleCreative" class="textAlign">Creative ACS</p>
                 </div>
                 <div class="card" id="Capgemen">
                     <img src="assets/img/capgemen.jpg" alt="Screenshot de l'intégration de Capgemen" id="screenCapgemen">
-                    <p id="titleCapgemen">Capgemen</p>
+                    <p id="titleCapgemen" class="textAlign">Capgemen</p>
                 </div>
                 <div class="card" id="Technews">
                     <img src="assets/img/technews.jpg" alt="Screenshot de Technews, un blog conçu sous Wordpress" id="screenTechnews">
-                    <p id="titleTechnews">Technews</p>
+                    <p id="titleTechnews" class="textAlign">Technews</p>
                 </div>
                 <div class="card" id="Allojyve">
                     <img src="assets/img/allojyve.jpg" alt="Screenshot d'Allojyve, une intégration entièrement crée en javascript à partir d'une div unique et utilisant une API" id="screenAllojyve">
-                    <p id="titleAllojyve">Allojyve</p>
+                    <p id="titleAllojyve" class="textAlign">Allojyve</p>
                 </div>
             </section>
             <section class="contact none flexColumn jcsaaic">
                 <h1>Contacts</h1>
-                <p>contactez moi via ce formulaire</p>
+                <p class="textAlign">contactez moi via ce formulaire</p>
                 <form class="form flexNormal jcsbaic" method="POST" action="">
                     <div class="leftCol flexColumn jcsbaic">
                         <input type="text" name="firstName" placeholder="Prénom" value="<?php if(isset($_POST['firstName'])) { echo $_POST['firstName']; } ?>" id="firstName">
@@ -253,12 +253,15 @@ if(isset($_POST['mailform'])) {
                     </div>
                 </div>
                 <div class="rightBlock">
-                    <p class="closeModal">X</p>
+                    <p class="closeModal textAlign">X</p>
                 </div>
             </div>
             <div class="secondModalRow">
                 <p class="descriptionProject"></p>
-                <a href="#" class="linkProject" target="_blank"></a>
+                <div>
+                    <a href="#" class="linkRepo" target="_blank"></a>
+                    <a href="#" class="linkProject" target="_blank"></a>
+                </div>
             </div>
         </section>
     </div>
