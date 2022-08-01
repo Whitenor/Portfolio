@@ -116,6 +116,7 @@ if(isset($_POST['mailform'])) {
                 </div>
             </section>
             <section class="formations flexNormal jcsaaic none">
+                <h2 class="none">formations</h2>
                 <div class="card flexColumn jcsaaic" id="DWWM">
                     <p>Titre Professionnel</p> 
                     <p>Développeur Web et Web Mobile</p>
@@ -138,6 +139,7 @@ if(isset($_POST['mailform'])) {
                 </div>
             </section>
             <section class="techAndComp flexColumn jcsaaic none">
+                <h2 class="none">tech</h2>
                 <div class="technologiesBlock flexColumn jccaic">
                     <p>Technologies en cours d'apprentissage:</p>
                     <div class="techno flexNormal jccaic">
@@ -176,6 +178,7 @@ if(isset($_POST['mailform'])) {
                 </div>
             </section>
             <section class="project none flexNormal">
+                <h2 class="none">projets</h2>
                 <div class="card" id="popCode">
                     <img src="assets/img/popcode.jpg" alt="Screenshot de popCode" id="screenpopCode">
                     <p id="titlepopCode" class="textAlign">popCode</p>
