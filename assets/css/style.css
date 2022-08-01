@@ -144,6 +144,8 @@ header > div {
     margin: auto;
     box-sizing: border-box;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 .about{
     height: 100vh;
@@ -224,7 +226,7 @@ header > div {
 }
 .project{
     padding: 10px;
-    width: 60vw;
+    width: 60%;
     flex-wrap: wrap;
     gap: 50px;
 }
@@ -440,7 +442,7 @@ header > div {
         overflow: scroll;
     }
     .project{
-        width: 70vw;
+        width: 70%;
         justify-content: center;
         overflow-x: hidden;
     }
