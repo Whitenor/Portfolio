@@ -222,9 +222,10 @@ if(isset($_POST['mailform'])) {
                 </div>
             </section>
             <section class="modalFormation none">
+                <h2 class="none">modalFormation</h2>
                 <div class="modalFormationContent">
                     <div class="rowFormation1">
-                        <h2 class="titleFormation"></h2>
+                        <p class="titleFormation"></p>
                         <p class="closeModalFormation">X</p>
                     </div>
                     <div class="rowFormation2">
@@ -238,10 +239,11 @@ if(isset($_POST['mailform'])) {
             </section>
         </div>
         <section class="modal none">
+            <h2 class="none">modalProjet</h2>
             <div class="firstModalRow">
                 <div class="leftBlock">
                     <div class="leftCol">
-                        <h2 class="titleProjectModal"></h2>
+                        <p class="titleProjectModal"></p>
                         <img src="" alt="">
                     </div>
                     <div class="rightCol">

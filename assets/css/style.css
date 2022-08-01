@@ -272,10 +272,15 @@ header > div {
     align-items: center;
     box-sizing: border-box;
 }
-.leftBlock > .leftCol > h2{
+.leftBlock > .leftCol > .titleProjectModal{
     width: 100%;
     height: 30%;
     text-align: start;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
 }
 .leftBlock > .leftCol > img{
     width: 100%;
@@ -419,6 +424,10 @@ header > div {
 }
 .modalFormationContent > .rowFormation1 > p{
     font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
     cursor: pointer;
 }
 .modalFormationContent > .rowFormation3 > p, .modalFormationContent > .rowFormation2 >p{
