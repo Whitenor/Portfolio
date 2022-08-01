@@ -156,7 +156,7 @@ for (let i = 0; i < cardProject.length; i++) {
 };
 for (let i = 0; i < sideMenuProjectButton.length; i++) {
     sideMenuProjectButton[i].addEventListener('click', function(e) {
-        openModalCard(e.target.id);
+        openModalCard(e.target.classList[0]);
         mainButton(crossFolder, sideMenuFolder, sideMenuHome, crossHome, pageProject);
     });    
 };

@@ -36,12 +36,15 @@ if(isset($_POST['mailform'])) {
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta name="robots" content="index">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ceci est le portfolio de Antoine Piron, rassemblant ces compétences ainsi que certains projets sur lequel il a pu travailler">
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Biryani:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Antoine Piron</title>
 </head>
 <body>
@@ -88,15 +91,15 @@ if(isset($_POST['mailform'])) {
             </div>
             <div class="sideMenuFolder hide borderNone">
                 <ul>
-                    <li><h2 id="popCode">popCode</h2></li>
-                    <li><h2 id="Creative">Creative</h2></li>
-                    <li><h2 id="Capgemen">Capgemen</h2></li>
-                    <li><h2 id="Technews">Technews</h2></li>
-                    <li><h2 id="Allojyve">Allojyve</h2></li>
+                    <li><h2 class="popCode">popCode</h2></li>
+                    <li><h2 class="Creative">Creative</h2></li>
+                    <li><h2 class="Capgemen">Capgemen</h2></li>
+                    <li><h2 class="Technews">Technews</h2></li>
+                    <li><h2 class="Allojyve">Allojyve</h2></li>
                 </ul>
             </div>
         </section>
-        <section id="content">
+        <div id="content">
             <section class="about flexColumn jcsaaic active">
                 <div class="rowTextAboutTitle flexColumn jcsaaic">
                     <h1>Antoine Piron</h1>
@@ -207,7 +210,7 @@ if(isset($_POST['mailform'])) {
                     </div>
                     <textarea name="messageForm" id="messageForm" placeholder="Votre message ..."><?php if(isset($_POST['messageForm'])) { echo $_POST['messageForm']; } ?></textarea>
                 </form>
-                <p id="validateForm"><?php if(isset($msg)) {echo $msg;}?></p>
+                <p id="validateForm" aria-hidden="true"><?php if(isset($msg)) {echo $msg;}?></p>
                 <p>Ou bien via ces moyens:</p>
                 <div class="rowContact flexNormal">
                     <p>Tel: <a href="tel:+33767149691">07.67.14.96.91</a></p>
@@ -222,15 +225,15 @@ if(isset($_POST['mailform'])) {
                         <p class="closeModalFormation">X</p>
                     </div>
                     <div class="rowFormation2">
-                        <p class="optionFormation"></p>
-                        <p class="obtentionFormation"></p>
+                        <p class="optionFormation" aria-hidden="true"></p>
+                        <p class="obtentionFormation" aria-hidden="true"></p>
                     </div>
                     <div class="rowFormation3">
-                        <p class="descriptionFormation"></p>
+                        <p class="descriptionFormation" aria-hidden="true"></p>
                     </div>
                 </div>
             </section>
-        </section>
+        </div>
         <section class="modal none">
             <div class="firstModalRow">
                 <div class="leftBlock">
@@ -239,9 +242,9 @@ if(isset($_POST['mailform'])) {
                         <img src="" alt="">
                     </div>
                     <div class="rightCol">
-                        <p class="durationProject"></p>
-                        <p class="typeProject"></p>
-                        <p class="technoProject"></p>
+                        <p class="durationProject" aria-hidden="true"></p>
+                        <p class="typeProject" aria-hidden="true"></p>
+                        <p class="technoProject" aria-hidden="true"></p>
                     </div>
                 </div>
                 <div class="rightBlock">
@@ -249,7 +252,7 @@ if(isset($_POST['mailform'])) {
                 </div>
             </div>
             <div class="secondModalRow">
-                <p class="descriptionProject"></p>
+                <p class="descriptionProject" aria-hidden="true"></p>
                 <div>
                     <a href="#" class="linkRepo" target="_blank"></a>
                     <a href="#" class="linkProject" target="_blank"></a>
@@ -258,6 +261,6 @@ if(isset($_POST['mailform'])) {
         </section>
     </div>
     <script src="assets/js/app.js"></script>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js" async></script>
 </body>
 </html>
