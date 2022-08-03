@@ -86,8 +86,10 @@ function openModalCard(cibleClic){
             typeProject.textContent = projectList[i].typeProjet;
             technoProject.textContent = projectList[i].techno;
             descriptionProject.textContent = projectList[i].description;
-            linkProject.href = projectList[i].link;
-            linkProject.textContent = 'Aller sur '+projectList[i].name;
+            if (projectList[i].link != "") {
+                linkProject.href = projectList[i].link;
+                linkProject.textContent = 'Aller sur '+projectList[i].name;
+            }
             linkRepo.href = projectList[i].repo;
             linkRepo.textContent = 'Voir le code sur Github';
             modal.classList.toggle('none');
