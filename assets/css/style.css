@@ -152,11 +152,14 @@ header > div {
 .rowTextAboutTitle{
     height: 60vh;
 }
+.rowTextAboutTitle > h2{
+    width: 60vw;
+}
 .textAbout{
     height: 40%;
 }
 .textAbout:last-child{
-    width: 50vw;
+    width: 60vw;
 }
 .rowButton{
     gap: 20px;
@@ -225,7 +228,7 @@ header > div {
 }
 .project{
     padding: 10px;
-    width: 60%;
+    width: 100%;
     flex-wrap: wrap;
     gap: 50px;
 }
@@ -433,15 +436,15 @@ header > div {
 .modalFormationContent > .rowFormation3 > p, .modalFormationContent > .rowFormation2 >p{
     font-size: 20px;
 }
+.underline{
+    text-decoration: underline;
+}
 @media screen and (max-width: 1024px) {
     h1{
         font-size: 28px;
     }
     h2{
         font-size: 20px;
-    }
-    p{
-        font-size: 12px
     }
     .rowButton{
         width: 60vw;
@@ -450,7 +453,6 @@ header > div {
         overflow: scroll;
     }
     .project{
-        width: 70%;
         justify-content: center;
         overflow-x: hidden;
     }
@@ -474,7 +476,13 @@ header > div {
         font-size: 12px;
     }
     li{
-        font-size: 10px;
+        font-size: 12px;
+    }
+    .rowTextAboutTitle > h2{
+        font-size: 16px;
+    }
+    .rowTextAboutTitle > div > p{
+        text-align: start;
     }
     .contact > p{
         font-size: 12px;
@@ -508,7 +516,7 @@ header > div {
         text-align: center;
     }
     .project > .card > img{
-        max-width: 30vw;
+        max-width: 50vw;
     }
     .rowContact{
         flex-direction: column;

@@ -126,7 +126,6 @@ document.querySelector('#envelopSvg').addEventListener('click', function() {
     checkOpenSectionPrimary();
     pageContact.classList.toggle('none');
     pageContact.classList.toggle('active');
-    sessionStorage.setItem('position', 'contact');
 });
 document.querySelector('#aboutMenuButton').addEventListener('click', function() {
     subMenu(pageAbout);
@@ -149,9 +148,21 @@ document.querySelector('#projectButtonAbout').addEventListener('click', function
     pageAbout.classList.toggle('none');
     pageAbout.classList.toggle('active');
 });
+document.querySelector('#contactButtonAbout').addEventListener('click', function() {
+    pageContact.classList.toggle('none');
+    pageContact.classList.toggle('active');
+    pageAbout.classList.toggle('none');
+    pageAbout.classList.toggle('active');
+})
 for (let i = 0; i < cardProject.length; i++) {
     cardProject[i].addEventListener('click', function(e) {
         openModalCard(e.target.id);
+        if (sideMenuFolder.classList.contains('open')===true) {
+            crossFolder.classList.toggle('crossRotate');
+            sideMenuFolder.classList.toggle('hide');
+            sideMenuFolder.classList.toggle('open');
+            checkBorder(sideMenuFolder);
+        }
     });  
 };
 for (let i = 0; i < sideMenuProjectButton.length; i++) {
@@ -203,4 +214,7 @@ modalFormation.addEventListener('click', function(e) {
     if (e.target.classList.contains('modalFormation') || e.target.classList.contains('closeModalFormation')) {
         modalFormation.classList.toggle('none');
     }
+})
+document.querySelector('#submit').addEventListener('click', function() {
+    sessionStorage.setItem('position', 'contact');
 })

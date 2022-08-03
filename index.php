@@ -141,7 +141,7 @@ if(isset($_POST['mailform'])) {
             <section class="techAndComp flexColumn jcsaaic none">
                 <h2 class="none">tech</h2>
                 <div class="technologiesBlock flexColumn jccaic">
-                    <p>Technologies en cours d'apprentissage:</p>
+                    <p class="underline">Technologies en cours d'apprentissage:</p>
                     <div class="techno flexNormal jccaic">
                     <span class="iconify" data-icon="logos:javascript" data-width="50"></span>
                     <span class="iconify" data-icon="vscode-icons:file-type-php" data-width="50"></span>
@@ -150,7 +150,7 @@ if(isset($_POST['mailform'])) {
                     </div>
                 </div>
                 <div class="technoFutur flexColumn">
-                    <p>Technologies en objectif d'apprentissage:</p>
+                    <p class="underline">Technologies en objectif d'apprentissage:</p>
                     <div class="flexNormal jccaic">
                         <span class="iconify" data-icon="cib:laravel" style="color: white;" data-width="50"></span>
                         <span class="iconify" data-icon="cib:symfony" style="color: white;" data-width="50"></span>
@@ -161,7 +161,7 @@ if(isset($_POST['mailform'])) {
                 </div>
                 <div class="otherComp flexNormal">
                     <div class="language">
-                        <p>Langues parlées et lues:</p>
+                        <p class="underline">Langues parlées et lues:</p>
                         <ul>
                             <li>Français (Langue maternelle)</li>
                             <li>Anglais (écrit fluide , oral en amélioration)</li>
@@ -169,7 +169,7 @@ if(isset($_POST['mailform'])) {
     
                     </div>
                     <div class="compDivers">
-                        <p>Compétences autres pouvant être utile:</p>
+                        <p class="underline">Compétences autres pouvant être utile:</p>
                         <ul>
                             <li>Base de configuration de serveur Linux</li>
                             <li>Organisation partiel des taches</li>
@@ -209,7 +209,7 @@ if(isset($_POST['mailform'])) {
                         <input type="text" name="lastName" placeholder="Nom" value="<?php if(isset($_POST['lastName'])) { echo $_POST['lastName']; } ?>" id="lastName">
                         <input type="tel" name="phone" placeholder="Téléphone" value="<?php if(isset($_POST['phone'])) { echo $_POST['phone']; } ?>" id="phone">
                         <input type="email" name="mail" placeholder="Email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" id="mail">
-                        <input type="submit" value="Envoyer" name="mailform">
+                        <input type="submit" value="Envoyer" name="mailform" id="submit">
                     </div>
                     <textarea name="messageForm" id="messageForm" placeholder="Votre message ..."><?php if(isset($_POST['messageForm'])) { echo $_POST['messageForm']; } ?></textarea>
                 </form>
