@@ -143,10 +143,10 @@ if(isset($_POST['mailform'])) {
                 <div class="technologiesBlock flexColumn jccaic">
                     <p class="underline">Technologies en cours d'apprentissage:</p>
                     <div class="techno flexNormal jccaic">
-                    <span class="iconify" data-icon="logos:javascript" data-width="50"></span>
-                    <span class="iconify" data-icon="vscode-icons:file-type-php" data-width="50"></span>
-                    <span class="iconify" data-icon="vscode-icons:file-type-html" data-width="50"></span>
-                    <span class="iconify" data-icon="vscode-icons:file-type-css" data-width="50"></span>
+                        <span class="iconify" data-icon="logos:javascript" data-width="50"></span>
+                        <span class="iconify" data-icon="la:php" style="color: #fffbf5;" data-width="50"></span>
+                        <span class="iconify" data-icon="akar-icons:bootstrap-fill" style="color: #353839;" data-width="50"></span>
+                        <span class="iconify" data-icon="cib:sass-alt" style="color: #353839;" data-width="50"></span>
                     </div>
                 </div>
                 <div class="technoFutur flexColumn">
@@ -157,6 +157,7 @@ if(isset($_POST['mailform'])) {
                         <span class="iconify" data-icon="ri:reactjs-fill" style="color: white;" data-width="50"></span>
                         <span class="iconify" data-icon="bxl:vuejs" style="color: white;" data-width="50"></span>
                         <span class="iconify" data-icon="fontisto:angularjs" style="color: white;" data-width="50"></span>
+                        <span class="iconify" data-icon="bi:wordpress" style="color: #fffbf5;" data-width="50"></span>
                     </div>
                 </div>
                 <div class="otherComp flexNormal">

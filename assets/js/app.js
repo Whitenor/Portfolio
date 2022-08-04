@@ -103,6 +103,14 @@ function subMenuHome(){
     sideMenuHome.classList.toggle('open');
     checkBorder(sideMenuHome);
 };
+function checkForButtonAbout(){
+    if (sideMenuHome.classList.contains('open') === true) {
+        sideMenuHome.classList.toggle('open');
+        sideMenuHome.classList.toggle('hide');
+        crossHome.classList.toggle('crossRotate');
+        checkBorder(sideMenuHome);
+    }
+}
 if (sessionStorage.getItem('position') === 'contact') {
     for (let i = 0; i < listMenu.length; i++) {
         checkOtherOpen(listMenu[i], listCross[i]);
@@ -143,18 +151,21 @@ document.querySelector('#techAndComp').addEventListener('click', function() {
 });
 document.querySelector('#technoButtonAbout').addEventListener('click', function() {
     subMenu(pageTechAndComp);
+    checkForButtonAbout();
 });
 document.querySelector('#projectButtonAbout').addEventListener('click', function() {
     pageProject.classList.toggle('none');
     pageProject.classList.toggle('active');
     pageAbout.classList.toggle('none');
     pageAbout.classList.toggle('active');
+    checkForButtonAbout();
 });
 document.querySelector('#contactButtonAbout').addEventListener('click', function() {
     pageContact.classList.toggle('none');
     pageContact.classList.toggle('active');
     pageAbout.classList.toggle('none');
     pageAbout.classList.toggle('active');
+    checkForButtonAbout();
 })
 for (let i = 0; i < cardProject.length; i++) {
     cardProject[i].addEventListener('click', function(e) {
