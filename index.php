@@ -54,14 +54,14 @@ if(isset($_POST['mailform'])) {
                 <ul class="flexColumn jcsbaic">
                     <li class="flexNormal jccaic">
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" id="homeSvg">
-                            <path d="M26 23.5307V13.8683C26.0001 13.1961 25.8612 12.5309 25.5919 11.9136C25.3226 11.2962 24.9285 10.7396 24.4337 10.278L15.2175 1.67496C14.7533 1.24151 14.1388 1 13.5 1C12.8612 1 12.2467 1.24151 11.7825 1.67496L2.56625 10.278C2.07153 10.7396 1.67744 11.2962 1.40812 11.9136C1.1388 12.5309 0.999928 13.1961 1 13.8683V23.5307C1 24.1856 1.26339 24.8137 1.73223 25.2768C2.20107 25.7398 2.83696 26 3.5 26H23.5C24.163 26 24.7989 25.7398 25.2678 25.2768C25.7366 24.8137 26 24.1856 26 23.5307Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13.4852 23.4853V17.4853M13.4852 17.4853V11.4853M13.4852 17.4853H19.4852M13.4852 17.4853H7.48523" stroke="white" stroke-linecap="round" id="crossHome" class="crossTransition"/>
+                            <path d="M26 23.5307V13.8683C26.0001 13.1961 25.8612 12.5309 25.5919 11.9136C25.3226 11.2962 24.9285 10.7396 24.4337 10.278L15.2175 1.67496C14.7533 1.24151 14.1388 1 13.5 1C12.8612 1 12.2467 1.24151 11.7825 1.67496L2.56625 10.278C2.07153 10.7396 1.67744 11.2962 1.40812 11.9136C1.1388 12.5309 0.999928 13.1961 1 13.8683V23.5307C1 24.1856 1.26339 24.8137 1.73223 25.2768C2.20107 25.7398 2.83696 26 3.5 26H23.5C24.163 26 24.7989 25.7398 25.2678 25.2768C25.7366 24.8137 26 24.1856 26 23.5307Z" stroke="#FFFBF5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.4852 23.4853V17.4853M13.4852 17.4853V11.4853M13.4852 17.4853H19.4852M13.4852 17.4853H7.48523" stroke="#FFFBF5" stroke-linecap="round" id="crossHome" class="crossTransition"/>
                         </svg>                        
                     </li>
                     <li class="flexNormal jccaic">
                         <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="folderSvg">
-                            <path d="M14 20V16M14 16V12M14 16H18M14 16H10" stroke="white" stroke-linecap="round" id="crossFolder" class="crossTransition"/>
-                            <path d="M26 21.4444V8.66667C26 7.98889 25.7366 7.33888 25.2678 6.85962C24.7989 6.38036 24.163 6.11111 23.5 6.11111H15.045C14.5806 6.1111 14.1254 5.97887 13.7305 5.72926C13.3355 5.47965 13.0163 5.12251 12.8087 4.69789L11.6913 2.41322C11.4836 1.98841 11.1642 1.63114 10.769 1.38152C10.3738 1.13189 9.91833 0.999779 9.45375 1H3.5C2.83696 1 2.20107 1.26925 1.73223 1.74851C1.26339 2.22776 1 2.87778 1 3.55556V21.4444C1 22.1222 1.26339 22.7722 1.73223 23.2515C2.20107 23.7308 2.83696 24 3.5 24H23.5C24.163 24 24.7989 23.7308 25.2678 23.2515C25.7366 22.7722 26 22.1222 26 21.4444Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 20V16M14 16V12M14 16H18M14 16H10" stroke="#FFFBF5" stroke-linecap="round" id="crossFolder" class="crossTransition"/>
+                            <path d="M26 21.4444V8.66667C26 7.98889 25.7366 7.33888 25.2678 6.85962C24.7989 6.38036 24.163 6.11111 23.5 6.11111H15.045C14.5806 6.1111 14.1254 5.97887 13.7305 5.72926C13.3355 5.47965 13.0163 5.12251 12.8087 4.69789L11.6913 2.41322C11.4836 1.98841 11.1642 1.63114 10.769 1.38152C10.3738 1.13189 9.91833 0.999779 9.45375 1H3.5C2.83696 1 2.20107 1.26925 1.73223 1.74851C1.26339 2.22776 1 2.87778 1 3.55556V21.4444C1 22.1222 1.26339 22.7722 1.73223 23.2515C2.20107 23.7308 2.83696 24 3.5 24H23.5C24.163 24 24.7989 23.7308 25.2678 23.2515C25.7366 22.7722 26 22.1222 26 21.4444Z" stroke="#FFFBF5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>  
                     </li>
                     <li class="flexNormal jccaic">
@@ -73,7 +73,7 @@ if(isset($_POST['mailform'])) {
                         </a>
                     </li>
                     <li class="flexNormal jccaic">
-                        <a href="https://github.com/Whitenor" target="_blank">
+                        <a href="https://github.com/#FFFBF5nor" target="_blank">
                             <img src="assets/img/github.svg" alt="Logo de github menant au profil de Antoine Piron" id="githubSVG">
                         </a>
                     </li>
@@ -152,11 +152,11 @@ if(isset($_POST['mailform'])) {
                 <div class="technoFutur flexColumn">
                     <p class="underline">Technologies en objectif d'apprentissage:</p>
                     <div class="flexNormal jccaic">
-                        <span class="iconify" data-icon="cib:laravel" style="color: white;" data-width="50"></span>
-                        <span class="iconify" data-icon="cib:symfony" style="color: white;" data-width="50"></span>
-                        <span class="iconify" data-icon="ri:reactjs-fill" style="color: white;" data-width="50"></span>
-                        <span class="iconify" data-icon="bxl:vuejs" style="color: white;" data-width="50"></span>
-                        <span class="iconify" data-icon="fontisto:angularjs" style="color: white;" data-width="50"></span>
+                        <span class="iconify" data-icon="cib:laravel" style="color: #FFFBF5;" data-width="50"></span>
+                        <span class="iconify" data-icon="cib:symfony" style="color: #FFFBF5;" data-width="50"></span>
+                        <span class="iconify" data-icon="ri:reactjs-fill" style="color: #FFFBF5;" data-width="50"></span>
+                        <span class="iconify" data-icon="bxl:vuejs" style="color: #FFFBF5;" data-width="50"></span>
+                        <span class="iconify" data-icon="fontisto:angularjs" style="color: #FFFBF5;" data-width="50"></span>
                         <span class="iconify" data-icon="bi:wordpress" style="color: #fffbf5;" data-width="50"></span>
                     </div>
                 </div>
