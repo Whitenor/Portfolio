@@ -232,6 +232,9 @@ header > div {
     flex-wrap: wrap;
     gap: 50px;
 }
+.project > .card {
+    max-height: 210px;
+}
 .project > .card > img{
     width: 320px;
     height: 180px;

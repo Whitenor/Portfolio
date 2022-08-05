@@ -178,7 +178,7 @@ if(isset($_POST['mailform'])) {
                     </div>
                 </div>
             </section>
-            <section class="project none flexNormal">
+            <section class="project none flexNormal jccaic">
                 <h2 class="none">projets</h2>
                 <div class="card" id="popCode">
                     <img src="assets/img/popcode.jpg" alt="Screenshot de popCode" id="screenpopCode">
