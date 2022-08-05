@@ -209,7 +209,7 @@ if(isset($_POST['mailform'])) {
                         <input type="text" name="firstName" placeholder="Prénom" value="<?php if(isset($_POST['firstName'])) { echo $_POST['firstName']; } ?>" id="firstName" required>
                         <input type="text" name="lastName" placeholder="Nom" value="<?php if(isset($_POST['lastName'])) { echo $_POST['lastName']; } ?>" id="lastName" required>
                         <input type="tel" name="phone" placeholder="Téléphone" value="<?php if(isset($_POST['phone'])) { echo $_POST['phone']; } ?>" id="phone" required>
-                        <input type="email" name="mail" placeholder="Email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" id="mail" required>
+                        <input type="email" name="mail" placeholder="Email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" id="mail" required pattern="[a-zA-Z0-9-.]+@[a-zA-Z]+.[a-zA-Z]">
                         <input type="submit" value="Envoyer" name="mailform" id="submit">
                     </div>
                     <textarea name="messageForm" id="messageForm" placeholder="Votre message ..." required><?php if(isset($_POST['messageForm'])) { echo $_POST['messageForm']; } ?></textarea>
