@@ -468,6 +468,9 @@ header > div {
     }
 }
 @media screen and (max-width: 512px){
+    p{
+        font-size: 16px;
+    }
     header{
         width: 50px;
         padding: 10px 0;
@@ -530,6 +533,7 @@ header > div {
     }
     .form > textarea{
         width: 100%;
+        min-height: 50px;
     }
     .form > .leftCol{
         width: 100%;

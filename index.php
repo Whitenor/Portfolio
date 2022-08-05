@@ -73,7 +73,7 @@ if(isset($_POST['mailform'])) {
                         </a>
                     </li>
                     <li class="flexNormal jccaic">
-                        <a href="https://github.com/#FFFBF5nor" target="_blank">
+                        <a href="https://github.com/Whitenor" target="_blank">
                             <img src="assets/img/github.svg" alt="Logo de github menant au profil de Antoine Piron" id="githubSVG">
                         </a>
                     </li>
