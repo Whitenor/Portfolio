@@ -1,8 +1,11 @@
 <?php
 if(isset($_POST['mailform'])) {
    if(!empty($_POST['lastName']) AND !empty($_POST['mail']) AND !empty($_POST['messageForm']) AND !empty($_POST['firstName']) AND !empty($_POST['phone'])) {
+        $lastName = $_POST['lastName'];
+        $firstName = $_POST['firstName'];
+        $mail = $_POST['mail'];
         $header="MIME-Version: 1.0\r\n";
-        $header.='From:"nom_d\'expediteur"<votre@mail.com>'."\n";
+        $header.="From:$lastName $firstName <$mail>"."\n";
         $header.='Content-Type:text/html; charset="uft-8"'."\n";
         $header.='Content-Transfer-Encoding: 8bit';
         $message='
