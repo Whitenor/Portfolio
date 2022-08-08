@@ -22,11 +22,6 @@ if(isset($_POST['mailform'])) {
         ';
         mail("antoine.pironsio@gmail.com", "Sujet du message", $message, $header);
         $msg="Votre message a bien été envoyé !";
-        $_POST['lastName']='';
-        $_POST['firstName']='';
-        $_POST['phone']='';
-        $_POST['mail']='';
-        $_POST['messageForm']='';
    } else {
       $msg="Tous les champs doivent être complétés !";
    }
