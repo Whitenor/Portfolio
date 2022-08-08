@@ -442,6 +442,9 @@ header > div {
 .underline{
     text-decoration: underline;
 }
+#textarea{
+    resize: none;
+}
 @media screen and (max-width: 1024px) {
     h1{
         font-size: 28px;
