@@ -25,8 +25,9 @@ if(isset($_POST['mailform'])) {
         </html>
         ';
         mail("antoine.piron@a-piron.fr", "Sujet du message", $message, $header);
-        $_SESSION['retourMail']="Votre message a bien été envoyé !";
-        header("Location: index.php");
+        // $_SESSION['retourMail']="Votre message a bien été envoyé !";
+        // header("Location: index.php");
+        $msg = "Votre message a bien été envoyé !";
    } else {
     $msg="Tous les champs doivent être complétés !";
    }
@@ -214,13 +215,21 @@ if(isset($_POST['mailform'])) {
                     </div>
                     <textarea name="messageForm" id="messageForm" placeholder="Votre message ..." required></textarea>
                 </form>
-                <p id="validateForm" aria-hidden="true"><?php if($_SESSION['retourMail']!= NULL) {
-                    echo $_SESSION['retourMail'];
-                    session_unset();}?></p>
+                <p id="validateForm" aria-hidden="true"><?php 
+                // if($_SESSION['retourMail']!= NULL) {
+                //     $test = $_SESSION['retourMail'];
+                //     echo $test;
+                //     var_dump($test);
+                //     session_unset();
+                //     }
+                if (isset($msg)) {
+                    echo $msg;
+                }
+                    ?></p>
                 <p>Ou bien via ces moyens:</p>
                 <div class="rowContact flexNormal">
                     <p>Tel: <a href="tel:+33767149691">07.67.14.96.91</a></p>
-                    <p>Email: <a href="mailto:antoine.pironsio@gmail.com" target="_blank">antoine.piron@a-piron.fr</a></p>
+                    <p>Email: <a href="mailto:antoine.piron@a-piron.fr" target="_blank">antoine.piron@a-piron.fr</a></p>
                     <p>Linkedin: <a href="https://www.linkedin.com/in/antoine-piron/" target="_blank">Antoine Piron</a></p>
                 </div>
             </section>
