@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST['mailform'])) {
    if(!empty($_POST['lastName']) AND !empty($_POST['mail']) AND !empty($_POST['messageForm']) AND !empty($_POST['firstName']) AND !empty($_POST['phone'])) {
         $lastName = $_POST['lastName'];
@@ -23,10 +24,11 @@ if(isset($_POST['mailform'])) {
             </body>
         </html>
         ';
-        mail("antoine.pironsio@gmail.com", "Sujet du message", $message, $header);
-        $msg="Votre message a bien été envoyé !";
+        mail("antoine.piron@a-piron.fr", "Sujet du message", $message, $header);
+        $_SESSION['retourMail']="Votre message a bien été envoyé !";
+        header("Location: index.php");
    } else {
-      $msg="Tous les champs doivent être complétés !";
+    $msg="Tous les champs doivent être complétés !";
    }
 }
 ?>
@@ -212,11 +214,13 @@ if(isset($_POST['mailform'])) {
                     </div>
                     <textarea name="messageForm" id="messageForm" placeholder="Votre message ..." required></textarea>
                 </form>
-                <p id="validateForm" aria-hidden="true"><?php if(isset($msg)) {echo $msg;}?></p>
+                <p id="validateForm" aria-hidden="true"><?php if($_SESSION['retourMail']!= NULL) {
+                    echo $_SESSION['retourMail'];
+                    session_unset();}?></p>
                 <p>Ou bien via ces moyens:</p>
                 <div class="rowContact flexNormal">
                     <p>Tel: <a href="tel:+33767149691">07.67.14.96.91</a></p>
-                    <p>Email: <a href="mailto:antoine.pironsio@gmail.com" target="_blank">antoine.pironsio@gmail.com</a></p>
+                    <p>Email: <a href="mailto:antoine.pironsio@gmail.com" target="_blank">antoine.piron@a-piron.fr</a></p>
                     <p>Linkedin: <a href="https://www.linkedin.com/in/antoine-piron/" target="_blank">Antoine Piron</a></p>
                 </div>
             </section>
