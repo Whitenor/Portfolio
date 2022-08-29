@@ -30,6 +30,9 @@ li{
     margin: 0;
     list-style: none;
 }
+a{
+    font-family: 'Alegreya Sans',sans-serif;
+}
 .textAlign{
     text-align: center;
 }
@@ -104,6 +107,9 @@ header > div {
     font-family: 'Biryani', sans-serif;
     font-size: 12px;
     transform: rotate(-90deg) translateX(50%);
+}
+#technoButtonAboutn #projectButtonAbout, #contactButtonAbout{
+    font-family: 'Alegreya Sans',sans-serif;
 }
 #envelopSvg{
     width: 25px;

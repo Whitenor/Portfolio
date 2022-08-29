@@ -104,7 +104,7 @@ if(isset($_POST['mailform'])) {
                     <h1>Antoine Piron</h1>
                     <h2>“Si il n'y a pas de difficultés, ce n’est pas drole”</h2>
                     <div class="textAbout flexColumn jcsaaic">
-                        <p>Voila comment je peux expliquer mon envie d’apprendre. </p>
+                        <p>Voilà comment je peux expliquer mon envie d’apprendre. </p>
                         <p>Toujours à la recherche de nouvelles choses à apprendre , de nouvelles façons de travailler, cela m’as amené dans le développement Web avec une préférence pour le back end , bien que je sois aussi formé pour le front-end.</p>
                     </div>
                 </div>
