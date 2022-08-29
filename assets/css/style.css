@@ -108,7 +108,7 @@ header > div {
     font-size: 12px;
     transform: rotate(-90deg) translateX(50%);
 }
-#technoButtonAboutn, #projectButtonAbout, #contactButtonAbout{
+#technoButtonAbout, #projectButtonAbout, #contactButtonAbout{
     font-family: 'Alegreya Sans',sans-serif;
 }
 #envelopSvg{

@@ -78,7 +78,7 @@ if(isset($_POST['mailform'])) {
                     </li>
                 </ul>
             </nav>
-            <div>Copyrigth © 2022 Antoine Piron</div>
+            <div>Copyright © 2022 Antoine Piron</div>
         </header>
         <section id="sideMenuHomeFolder" class="flexNormal">
             <div class="sideMenuHome hide borderNone">
