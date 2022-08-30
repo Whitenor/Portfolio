@@ -105,7 +105,7 @@ if(isset($_POST['mailform'])) {
                     <h2>“Si il n'y a pas de difficultés, ce n’est pas drole”</h2>
                     <div class="textAbout flexColumn jcsaaic">
                         <p>Voilà comment je peux expliquer mon envie d’apprendre. </p>
-                        <p>Toujours à la recherche de nouvelles choses à apprendre , de nouvelles façons de travailler, cela m’as amené dans le développement Web avec une préférence pour le back end , bien que je sois aussi formé pour le front-end.</p>
+                        <p>Toujours à la recherche de nouvelles choses à apprendre , de nouvelles façons de travailler, cela m’a amené dans le développement Web avec une préférence pour le back end , bien que je sois aussi formé pour le front-end.</p>
                     </div>
                 </div>
                 <div class="rowButton flexNormal jcsaaic">
@@ -214,7 +214,7 @@ if(isset($_POST['mailform'])) {
                     <textarea name="messageForm" id="messageForm" placeholder="Votre message ..." required></textarea>
                 </form>
                 <p id="validateForm" aria-hidden="true"><?php if (isset($msg)) {echo $msg;}?></p>
-                <p>Ou bien via ces moyens:</p>
+                <p>Où bien via ces moyens:</p>
                 <div class="rowContact flexNormal">
                     <p>Tel: <a href="tel:+33767149691">07.67.14.96.91</a></p>
                     <p>Email: <a href="mailto:antoine.piron@a-piron.fr" target="_blank">antoine.piron@a-piron.fr</a></p>

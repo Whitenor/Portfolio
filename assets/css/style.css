@@ -384,12 +384,15 @@ header > div {
 .form > .leftCol{
     height: 100%;
     width: 30%;
+    box-sizing: border-box;
 }
 .form > .leftCol > input{
     width: 100%;
     height: 30px;
     background: #939A99;
     border: none;
+    padding: 5px;
+    box-sizing: border-box;
 }
 .form > .leftCol > input:last-child:hover{
     color: red;
