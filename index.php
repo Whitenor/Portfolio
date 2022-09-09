@@ -1,37 +1,3 @@
-<!-- <?php
-session_start();
-if(isset($_POST['mailform'])) {
-   if(!empty($_POST['lastName']) AND !empty($_POST['mail']) AND !empty($_POST['messageForm']) AND !empty($_POST['firstName']) AND !empty($_POST['phone'])) {
-        $lastName = $_POST['lastName'];
-        $firstName = $_POST['firstName'];
-        $mail = $_POST['mail'];
-        $header="MIME-Version: 1.0\r\n";
-        $header.="From:$lastName $firstName <$mail>"."\n";
-        $header.='Content-Type:text/html; charset="uft-8"'."\n";
-        $header.='Content-Transfer-Encoding: 8bit';
-        $message='
-        <html>
-            <body>
-                <div align="center">
-            
-                <u>Nom de l\'expéditeur :</u>'.$_POST['lastName'].'<br />
-                <u>Prénom de l\'expéditeur :</u>'.$_POST['firstName'].'<br />
-                <u>Téléphone de l\'expéditeur :</u>'.$_POST['phone'].'<br />
-                <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
-                <br />
-                '.nl2br($_POST['messageForm']).'
-                </div>
-            </body>
-        </html>
-        ';
-        mail("antoine.piron@a-piron.fr", "Sujet du message", $message, $header);
-        $msg = "Votre message a bien été envoyé !";
-   } else {
-    $msg="Tous les champs doivent être complétés !";
-   }
-}
-?> -->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>

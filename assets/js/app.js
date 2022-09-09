@@ -30,7 +30,8 @@ var bacPro = document.querySelector('#bacPro');
 var titleFormation = document.querySelector('.titleFormation');
 var optionFormation = document.querySelector('.optionFormation');
 var obtentionFormation = document.querySelector('.obtentionFormation');
-var descriptionFormation = document.querySelector('.descriptionFormation');
+var descriptionFormation = document.querySelector('.descriptionFormation')
+var submitForm = document.querySelector('#submitForm');
 const projectList = [
     {name: "popCode", description: "Basé sur les sites Popcorn garage et Popcorn TV , il nous a été demandé de créer une déclinaison basée sur les langages de programmations. La maquette nous était fournie par Alain Merucci et le cahier des charges ne contenait que peu de restrictions au niveau des technos pouvant être utilisées. Le responsive ne devait être qu'en partie gérer et afficher un message pour l'utilisateur si celui ci était une tablette ou un téléphone", link:"https://www.popcode.a-piron.fr", screenshot:"assets/img/popcode.jpg", periode:"du 25 Juin 2022 au 22 Juillet 2022", typeProjet:"Solo", techno:"HTML, CSS, JavaScript, Github , Git", repo:"https://github.com/Whitenor/ProjetJSPopcorn"},
     {name: "Creative", description: "Le but de ce projet était de réaliser une intégration basique avec HTML / CSS et Javascript. Le choix des technos n'avait qu'une seule restriction qui était de ne pas utiliser de framework CSS comme Bootstrap. nous étions incité à ajouter des animations en plus par rapport à la maquette.", link:"/devWebWebMobile/Creatives", screenshot:"assets/img/creative.jpg", periode:"du 17 au 23 Mai 2022",typeProjet:"En groupe",techno:"HTML, CSS, JavaScript, Github , Git",repo:"https://github.com/Whitenor/ProjectOneInteNoBootstrap"},
