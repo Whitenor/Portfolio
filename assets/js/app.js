@@ -235,12 +235,10 @@ submitForm.addEventListener('click', function(e) {
     formdata.append('message', message.value);
     const ajax = new XMLHttpRequest();
     ajax.open('POST', 'contact.php');
-    ajax.onreadystatechange = function() {
-        if (ajax.readyState ==  4 && ajax.status == 200) {
-            console.log(ajax.responseText, ajax.status, ajax.readyState);
-        } else {
-            console.log(ajax.res, ajax.status, ajax.readyState);
-        }
-    }
     ajax.send(formdata);
+    firstname.value = '';
+    lastname.value = '';
+    mail.value = '';
+    phone.value = '';
+    message.value= '';
 })
