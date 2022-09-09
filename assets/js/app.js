@@ -222,6 +222,7 @@ modalFormation.addEventListener('click', function(e) {
 })
 submitForm.addEventListener('click', function(e) {
     e.preventDefault();
+    const formdata = new FormData();
     formdata.append('firstName', firstname.value);
     formdata.append('lastName', lastname.value);
     formdata.append('mail', mail.value);
