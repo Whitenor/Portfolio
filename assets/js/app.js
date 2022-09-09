@@ -111,15 +111,6 @@ function checkForButtonAbout(){
         checkBorder(sideMenuHome);
     }
 }
-if (sessionStorage.getItem('position') === 'contact') {
-    for (let i = 0; i < listMenu.length; i++) {
-        checkOtherOpen(listMenu[i], listCross[i]);
-    }
-    checkOpenSectionPrimary();
-    pageContact.classList.toggle('none');
-    pageContact.classList.toggle('active');
-    sessionStorage.removeItem('position');
-};
 document.querySelector('#homeSvg').addEventListener('click', function() {
     mainButton(crossHome, sideMenuHome, sideMenuFolder, crossFolder);
 });
@@ -228,6 +219,21 @@ modalFormation.addEventListener('click', function(e) {
         modalFormation.classList.toggle('none');
     }
 })
-document.querySelector('#submit').addEventListener('click', function() {
-    sessionStorage.setItem('position', 'contact');
+submitForm.addEventListener('click', function(e) {
+    e.preventDefault();
+    formdata.append('firstName', firstname.value);
+    formdata.append('lastName', lastname.value);
+    formdata.append('mail', mail.value);
+    formdata.append('phone', phone.value);
+    formdata.append('message', message.value);
+    const ajax = new XMLHttpRequest();
+    ajax.open('POST', 'contact.php');
+    ajax.onreadystatechange = function() {
+        if (ajax.readyState ==  4 && ajax.status == 200) {
+            console.log(ajax.responseText, ajax.status, ajax.readyState);
+        } else {
+            console.log(ajax.res, ajax.status, ajax.readyState);
+        }
+    }
+    ajax.send(formdata);
 })

@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 if(isset($_POST['mailform'])) {
    if(!empty($_POST['lastName']) AND !empty($_POST['mail']) AND !empty($_POST['messageForm']) AND !empty($_POST['firstName']) AND !empty($_POST['phone'])) {
@@ -30,7 +30,7 @@ if(isset($_POST['mailform'])) {
     $msg="Tous les champs doivent être complétés !";
    }
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="fr">
