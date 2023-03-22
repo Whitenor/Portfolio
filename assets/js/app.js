@@ -227,6 +227,9 @@ modalFormation.addEventListener('click', function(e) {
 })
 submitForm.addEventListener('click', function(e) {
     e.preventDefault();
+    if(regexMail.test(mail.value) == false || firstname.value =="" || firstname.value == null || lastname.value =="" || lastname.value == null || phone.value =="" || phone.value == null || message.value =="" || message.value == null){
+        return;
+    }else{
     const formdata = new FormData();
     formdata.append('firstName', firstname.value);
     formdata.append('lastName', lastname.value);
@@ -241,4 +244,5 @@ submitForm.addEventListener('click', function(e) {
     mail.value = '';
     phone.value = '';
     message.value= '';
+    }
 })

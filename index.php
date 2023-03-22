@@ -173,7 +173,7 @@
                     <div class="leftCol flexColumn jcsbaic">
                         <input type="text" name="firstName" placeholder="Prénom" id="firstName" required>
                         <input type="text" name="lastName" placeholder="Nom" id="lastName" required>
-                        <input type="tel" name="phone" placeholder="Téléphone" id="phone" required>
+                        <input type="tel" name="phone" placeholder="Téléphone" id="phone" required pattern="/\d+$/">
                         <input type="email" name="mail" placeholder="Email" id="mail" required>
                         <input type="submit" value="Envoyer" name="mailform" id="submitForm">
                     </div>
